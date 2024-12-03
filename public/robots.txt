@@ -1,0 +1,7 @@
+Sitemap: https://necrowhisper.samudrainteractive.com/sitemap.xml
+
+User-agent: *
+Allow: /*
+
+Disallow: /api/*
+
