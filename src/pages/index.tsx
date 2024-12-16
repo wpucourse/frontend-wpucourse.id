@@ -23,7 +23,7 @@ export default function Home() {
             <h1 className="text-center text-3xl font-bold lg:text-6xl">
               Jadi Talenta Digital Terbaik
             </h1>
-            <p className="mx-auto mt-4 w-2/3 text-center text-xl">
+            <p className="mx-auto mt-4 w-2/3 text-center text-xl font-medium">
               Platform online course terbaik dengan dukungan mentor
               berpengalaman dan materi terlengkap
             </p>
