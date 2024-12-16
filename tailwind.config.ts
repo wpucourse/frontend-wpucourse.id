@@ -1,48 +1,35 @@
-import type { Config } from 'tailwindcss';
-import tailwindcssAnimate from 'tailwindcss-animate';
+import type { Config } from "tailwindcss";
 
 const config = {
-  darkMode: ['class'],
+  darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
   ],
-  prefix: '',
+  prefix: "",
   theme: {
     container: {
       center: true,
-      padding: '2rem',
-      screens: {
-        '2xl': '1400px',
-      },
     },
     extend: {
-      keyframes: {
-        'accordion-down': {
-          from: { height: '0' },
-          to: { height: 'var(--radix-accordion-content-height)' },
-        },
-        'accordion-up': {
-          from: { height: 'var(--radix-accordion-content-height)' },
-          to: { height: '0' },
-        },
-      },
       colors: {
-        wpu: { primary: '#008080' },
-        dark: {
-          primary: '#1f2937',
-          secondary: '#18181b',
+        wpu: { primary: "#008080" },
+      },
+      keyframes: {
+        navbar: {
+          "0%": { opacity: "0", transform: "translateY(-50%)" },
+          "50%": { opacity: "0", transform: "translateY(-25%)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
         },
       },
       animation: {
-        'accordion-down': 'accordion-down 0.2s ease-out',
-        'accordion-up': 'accordion-up 0.2s ease-out',
+        navbar: "navbar 0.3s ease-in-out",
       },
     },
   },
-  plugins: [tailwindcssAnimate],
+  plugins: [],
 } satisfies Config;
 
 export default config;

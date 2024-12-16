@@ -1,40 +1,41 @@
-import Header from '@/components/common/Header';
-import Image from 'next/image';
-import Link from 'next/link';
+import GridPattern from "@/components/common/GridPattern/GridPattern";
+import Header from "@/components/common/Header";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="min-h-screen container mx-auto">
+    <>
       <Header
         canonical="https://wpucourse.id/"
         description="Platform belajar online terbaik di Indonesia"
         title="WPU Course"
         page="home"
-        keywords="online course, course, wpu course, wpu, sandhika galih, avip syaifulloh, belajar mern, belajar react, belajar nextjs"
+        keywords="online course, course, wpu course, wpu, sandhika galih, avip syaifulloh, agung rizkyana, belajar mern, belajar react, belajar nextjs"
       />
-      <nav className="h-20 w-full flex justify-between items-center">
-        <Image
-          src="/general/logo-full.png"
-          alt="logo"
-          width={160}
-          height={100}
-        />
-        <Link href="https://belajarmern.id" target="_blank">
-          <button className="text-white font-bold bg-wpu-primary py-2 px-4 rounded-full hover:opacity-80">
-            Learn More
-          </button>
-        </Link>
-      </nav>
-      <section className="relative mb-20">
-        <Link href="https://belajarmern.id" target="_blank">
-          <Image src="/home/hero.png" alt="logo" width={1600} height={960} />
-        </Link>
-        <div className="absolute bottom-0 left-0 w-[32.5%] h-[17%] bg-wpu-primary rounded-md flex justify-center items-center md:rounded-xl lg:rounded-3xl">
-          <h1 className="text-[60%] text-white font-bold md:text-[100%] lg:text-[200%]">
-            Featured Course
-          </h1>
+      <section className="relative mb-20 h-screen">
+        <GridPattern />
+        <div className="container mx-auto flex h-screen items-center justify-center px-4 sm:px-0">
+          <div className="flex flex-col lg:gap-4">
+            <h1 className="inline-block bg-gradient-to-r from-blue-500 via-green-500 to-wpu-primary bg-clip-text text-center text-3xl font-bold text-transparent lg:py-2 lg:text-6xl">
+              Belajar Bersama Kami
+            </h1>
+            <h1 className="text-center text-3xl font-bold lg:text-6xl">
+              Jadi Talenta Digital Terbaik
+            </h1>
+            <p className="mx-auto mt-4 w-2/3 text-center text-xl">
+              Platform online course terbaik dengan dukungan mentor
+              berpengalaman dan materi terlengkap
+            </p>
+            <Link
+              href="https://learn.wpucourse.id/auth/register"
+              className="mx-auto w-fit rounded-xl border bg-wpu-primary px-4 py-3 text-center font-semibold text-white"
+            >
+              Belajar Sekarang
+            </Link>
+          </div>
         </div>
       </section>
-    </main>
+    </>
   );
 }
