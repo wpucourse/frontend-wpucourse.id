@@ -182,7 +182,7 @@ const MainLayout = (props: PropTypes) => {
       >
         <nav
           className={cn(
-            "container mx-4 flex h-full items-center justify-between rounded-2xl border border-gray-100 bg-gray-100 bg-opacity-10 bg-clip-padding px-6 shadow-md backdrop-blur-sm backdrop-filter transition-all sm:mx-auto",
+            "container mx-4 flex h-full items-center justify-between rounded-2xl bg-gray-100 bg-opacity-10 bg-clip-padding px-6 backdrop-blur-sm backdrop-filter transition-all sm:mx-auto",
             {
               "border-none bg-transparent px-0 shadow-none backdrop-blur-none backdrop-filter-none":
                 scrollHeight > 20,
@@ -417,12 +417,12 @@ const MainLayout = (props: PropTypes) => {
 
               <div className="mt-4 flex flex-col items-start gap-4 xl:flex-row">
                 <Link
-                  href="mailto:info@wpucourse_id"
+                  href="mailto:info@wpucourse.id"
                   target="_blank"
                   className="flex items-center justify-center gap-1 text-sm text-neutral-300"
                 >
                   <MdEmail className="text-2xl" />
-                  <p>info@wpucourse_id</p>
+                  <p>info@wpucourse.id</p>
                 </Link>
                 <Link
                   href="https://wa.me/6285190062005"
