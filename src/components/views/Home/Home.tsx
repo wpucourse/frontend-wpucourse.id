@@ -4,6 +4,8 @@ import Testimonial from "./Testimonial";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { FaArrowRightLong } from "react-icons/fa6";
+import About from "./About";
+import Reason from "./Reason";
 
 const IMAGES_BG = [
   {
@@ -101,32 +103,31 @@ const IMAGES_BG = [
 const Home = () => {
   return (
     <div>
-      <section className="relative mb-20 mt-20 h-[90vh] max-h-[1080px] overflow-x-hidden">
+      <section className="relative mb-20 mt-20 h-[60vh] max-h-[1080px] overflow-x-hidden md:h-[90vh]">
         <GridPattern />
-        {/* <Image src="/dummy.png" alt="bg" fill /> */}
         <div className="container relative mx-auto flex h-full items-center justify-center px-4 sm:px-0">
-          <div className="flex flex-col items-center lg:gap-4">
+          <div className="flex flex-col items-center md:gap-4">
             <div className="mb-2 flex w-fit items-center rounded-full border border-gray-200 bg-white/50 p-1 backdrop-blur">
-              <div className="rounded-full bg-gray-200/50 px-2 py-1 font-semibold backdrop-blur">
+              <div className="hidden rounded-full bg-gray-200/50 px-2 py-1 font-semibold backdrop-blur md:block">
                 Kenapa WPU Course?
               </div>
               <button className="flex items-center gap-2 px-4 font-semibold">
                 Lihat penawaran eksklusif kami <FaArrowRightLong />
               </button>
             </div>
-            <h1 className="inline-block bg-gradient-to-r from-blue-500 via-green-500 to-wpu-primary bg-clip-text text-center text-3xl font-bold text-transparent lg:py-2 lg:text-6xl">
+            <h1 className="inline-block bg-gradient-to-r from-blue-500 via-green-500 to-wpu-primary bg-clip-text text-center text-4xl font-bold text-transparent md:py-2 md:text-6xl">
               Belajar Bersama Kami
             </h1>
-            <h1 className="text-center text-3xl font-bold lg:text-6xl">
+            <h1 className="text-center text-4xl font-bold md:text-6xl">
               Jadi Talenta Digital Terbaik
             </h1>
-            <p className="mx-auto mt-4 w-2/3 text-center text-xl font-medium">
+            <p className="mx-auto mt-4 text-center text-xl font-medium md:w-2/3">
               Platform online course terbaik dengan dukungan mentor
               berpengalaman dan materi terlengkap
             </p>
             <Link
               href="https://learn.wpucourse.id/auth/register"
-              className="mx-auto mt-3 w-fit rounded-xl border bg-wpu-primary px-4 py-3 text-center font-semibold text-white"
+              className="mx-auto mt-5 w-fit rounded-xl border bg-wpu-primary px-4 py-3 text-center font-semibold text-white md:mt-3"
             >
               Belajar Sekarang
             </Link>
@@ -146,6 +147,8 @@ const Home = () => {
           ))}
         </div>
       </section>
+      <Reason />
+      <About />
       <Testimonial />
     </div>
   );

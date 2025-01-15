@@ -4,11 +4,11 @@ import Marquee from "@/components/common/Marquee";
 const reviews = [
   {
     name: "Satrio Adi Prakoso",
-    body: "Puas banget sih selama mengikuti kelas di wpucourse sini, kalau ada kendala atau sesi tanya tanya juga ada dan response nya cepat sih, Mantap.",
+    body: "Puas banget selama mengikuti kelas di wpucourse sini, ada sesi tanya jawab juga dan response nya cepat.",
   },
   {
     name: "Mario Achmad Taufik",
-    body: "Puas banget belajar di WPU Course, materi lengkap dan terstruktur, penyampaiannya juga enak jdi mudah dimengerti.",
+    body: "Puas banget belajar di WPU Course, materi lengkap dan terstruktur, penyampaiannya juga enak jadi mudah dimengerti.",
   },
   {
     name: "Reza Fahlevi",
@@ -36,11 +36,11 @@ const reviews = [
   },
   {
     name: "Febrian Andi Nugroho",
-    body: "Materi dan penjelasan dalam video sudah bagus karena dibuat seolah-olah sedang mengerjakan real project dengan tim yang mempunyai role masing-masing.",
+    body: "Materi dan penjelasan dalam video bagus karena dibuat seolah-olah sedang mengerjakan real project dengan tim yang mempunyai role masing-masing.",
   },
   {
     name: "Abdurrohman Rifai",
-    body: "Video nya sangat beginner friendly dan saya yang belum belajar typescript saja sudah agak paham mengenai typescript contoh interface dan type ketika deklarasi function.",
+    body: "Video nya sangat beginner friendly dan saya yang belum belajar typescript saja sudah agak paham mengenai typescript.",
   },
 ];
 
@@ -53,17 +53,16 @@ const ReviewCard = ({ name, body }: { name: string; body: string }) => {
       className={cn(
         "relative w-64 cursor-pointer overflow-hidden rounded-xl border p-4",
         "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
-        "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
       )}
     >
       <div className="flex flex-row items-center gap-2">
         <div className="flex flex-col">
-          <figcaption className="font-medium text-wpu-primary dark:text-white">
+          <figcaption className="font-semibold text-wpu-primary dark:text-white">
             {name}
           </figcaption>
         </div>
       </div>
-      <blockquote className="mt-2 text-sm">{body}</blockquote>
+      <blockquote className="mt-2 text-xs lg:text-sm">{body}</blockquote>
     </figure>
   );
 };
@@ -71,7 +70,16 @@ const ReviewCard = ({ name, body }: { name: string; body: string }) => {
 function Testimonial() {
   return (
     <section className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden">
-      <h1 className="mb-4 text-5xl font-bold text-wpu-primary">Testimonial</h1>
+      <div className="container px-4 lg:px-0">
+        <h1 className="mb-2 text-4xl font-bold text-wpu-primary lg:text-5xl">
+          Testimonial
+        </h1>
+        <p className="mb-4 text-lg text-gray-700">
+          Kami percaya bahwa pengalaman terbaik datang dari student yang telah
+          menyelesaikan course di WPU Course.
+        </p>
+        <div className="mb-8 h-1 w-[100px] rounded-full bg-wpu-primary" />
+      </div>
       <Marquee pauseOnHover className="[--duration:20s]">
         {firstRow.map((review) => (
           <ReviewCard key={review.name} {...review} />
@@ -82,8 +90,6 @@ function Testimonial() {
           <ReviewCard key={review.name} {...review} />
         ))}
       </Marquee>
-      <div className="dark:from-background pointer-events-none absolute inset-y-0 left-0 w-1/6 bg-gradient-to-r from-white"></div>
-      <div className="dark:from-background pointer-events-none absolute inset-y-0 right-0 w-1/6 bg-gradient-to-l from-white"></div>
     </section>
   );
 }

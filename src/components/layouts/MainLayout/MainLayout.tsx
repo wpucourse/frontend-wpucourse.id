@@ -15,6 +15,7 @@ import {
 } from "react-icons/fa6";
 import { cn } from "@/lib/utils";
 import { MdEmail, MdLocalPhone } from "react-icons/md";
+import { FaWhatsapp } from "react-icons/fa";
 
 interface PropTypes {
   children: ReactNode;
@@ -175,7 +176,7 @@ const MainLayout = (props: PropTypes) => {
         className={cn(
           "fixed top-4 z-50 flex h-20 w-full items-center justify-between transition-all",
           {
-            "top-0 border-gray-100 bg-gray-100 bg-opacity-50 bg-clip-padding shadow-lg backdrop-blur-md backdrop-filter":
+            "top-0 border-gray-100 bg-white bg-clip-padding shadow-lg backdrop-blur-md backdrop-filter":
               scrollHeight > 20,
           },
         )}
@@ -184,7 +185,7 @@ const MainLayout = (props: PropTypes) => {
           className={cn(
             "container mx-4 flex h-full items-center justify-between rounded-2xl bg-gray-100 bg-opacity-10 bg-clip-padding px-6 backdrop-blur-sm backdrop-filter transition-all sm:mx-auto",
             {
-              "border-none bg-transparent px-0 shadow-none backdrop-blur-none backdrop-filter-none":
+              "border-none px-0 shadow-none backdrop-blur-none backdrop-filter-none":
                 scrollHeight > 20,
             },
           )}
@@ -303,6 +304,9 @@ const MainLayout = (props: PropTypes) => {
             className={cn(
               "absolute left-0 right-0 top-full mx-auto w-full animate-navbar py-4 transition-all duration-300 ease-out md:hidden",
               sidebarOpen ? "block" : "hidden",
+              {
+                "left-4 right-4 w-[calc(100%-2rem)]": scrollHeight > 20,
+              },
             )}
           >
             <div className="container px-0">
@@ -400,6 +404,21 @@ const MainLayout = (props: PropTypes) => {
         </nav>
       </header>
       <div>{children}</div>
+      <Link
+        href="https://api.whatsapp.com/send?phone=6285190062005"
+        target="_blank"
+        className={cn(
+          "group fixed bottom-4 right-4 hidden cursor-pointer gap-2 rounded-full border-2 border-white bg-wpu-primary p-4 text-white transition-all lg:bottom-8 lg:right-8",
+          {
+            flex: scrollHeight > 20,
+          },
+        )}
+      >
+        <FaWhatsapp size={24} />{" "}
+        <span className="hidden transition-all group-hover:inline">
+          Contact Support
+        </span>
+      </Link>
       <footer className="m-4 rounded-2xl bg-neutral-800 text-white md:m-8">
         <div className="container mx-auto flex flex-col gap-8 px-6 py-8 md:py-12">
           <div className="flex w-full flex-col gap-8 md:flex-row md:gap-20">
@@ -455,7 +474,7 @@ const MainLayout = (props: PropTypes) => {
           </div>
           <div className="flex flex-col-reverse justify-between gap-4 border-t-2 border-neutral-700 pt-4 md:flex-row lg:items-center">
             <p className="text-sm text-neutral-400">
-              © 2024 WPU Course. All Rights Reserved.
+              © {new Date().getFullYear()} WPU Course. All Rights Reserved.
             </p>
             <div className="flex gap-4">
               {LINKS_SOCIAL.map((social) => (
