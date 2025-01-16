@@ -20,9 +20,16 @@ const Discount = () => {
       <div id="offer" className="absolute -top-[300px]" />
       <div className="w-full lg:w-1/2">
         <div className="flex-1 rounded-2xl border-2 border-gray-100 bg-white p-5 pt-8">
-          <h2 className="mb-1 text-2xl font-bold text-wpu-primary">
-            Belajar MERN Stack
-          </h2>
+          <div className="mb-1 flex items-center gap-4 text-2xl font-bold text-wpu-primary">
+            Belajar MERN Stack{" "}
+            <div className="rounded-full bg-wpu-primary px-2 py-1 text-sm text-white">
+              86% Off
+            </div>
+          </div>
+          <div className="flex items-center gap-2">
+            <p className="line-through">Rp 2.500.000</p>
+            <p className="text-lg font-bold text-wpu-primary">Rp 350.000</p>
+          </div>
           <Image
             className="mt-4 w-full rounded-lg border border-gray-100"
             src="/general/cover-belajar-mern.webp"
@@ -37,14 +44,14 @@ const Discount = () => {
         <h1 className="mt-4 text-4xl font-bold leading-normal text-wpu-primary">
           Nikmati Penawaran Eksklusif dari WPU Course
         </h1>
-        <p className="mb-8 mt-2 text-base font-medium leading-relaxed text-gray-600">
+        <p className="mb-6 mt-2 text-base font-medium leading-relaxed text-gray-600">
           WPU Course menawarkan diskon eksklusif kepada student yang ingin
-          belajar di platform kami. Salin kode ini untuk kelas Belajar MERN
-          Stack dan nikmati penawaran spesial saat membeli course di WPU Course.
+          belajar di platform kami. Salin kode ini dan nikmati penawaran spesial
+          saat membeli course di WPU Course.
         </p>
         <div
           className={cn(
-            "flex w-fit items-center justify-between gap-6 rounded-lg border-2 border-gray-300 px-4 py-3",
+            "flex w-fit items-center justify-between gap-6 rounded-lg border-2 border-dashed border-gray-300 px-4 py-3",
             {
               "border-wpu-primary": successCopy,
             },

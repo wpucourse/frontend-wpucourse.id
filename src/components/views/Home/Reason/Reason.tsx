@@ -15,7 +15,7 @@ const Reason = () => {
           Temukan pengalaman belajar terbaik dengan mentor berpengalaman dan
           course yang dirancang khusus untukmu sesuai standar industri
         </p>
-        <div className="mt-8 flex flex-col gap-8 lg:flex-row">
+        <div className="mt-8 flex flex-col items-center gap-8 lg:flex-row">
           <div className="flex w-full flex-col gap-8 lg:w-1/2">
             <div className="flex items-center gap-6 border-b border-white/30 pb-8">
               <div className="w-fit rounded-full border-2 border-white p-4">

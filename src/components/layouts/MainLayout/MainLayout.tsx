@@ -1,13 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ReactNode, useEffect, useRef, useState } from "react";
-import { IoBusiness, IoChevronDownOutline, IoMail } from "react-icons/io5";
+import { ReactNode, useEffect, useState } from "react";
+import { IoBusiness, IoChevronDownOutline } from "react-icons/io5";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import {
   FaBookOpen,
   FaDiscord,
   FaInstagram,
   FaLinkedin,
+  FaLocationDot,
   FaMailchimp,
   FaNewspaper,
   FaPhone,
@@ -16,6 +17,7 @@ import {
 import { cn } from "@/lib/utils";
 import { MdEmail, MdLocalPhone } from "react-icons/md";
 import { FaWhatsapp } from "react-icons/fa";
+import { useRouter } from "next/router";
 
 interface PropTypes {
   children: ReactNode;
@@ -27,6 +29,11 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 const LINKS = [
+  {
+    title: "Beranda",
+    type: "link",
+    href: "/",
+  },
   {
     title: "Tentang Kami",
     type: "link",
@@ -40,7 +47,7 @@ const LINKS = [
         title: "Online Course",
         description:
           "Belajar melalui video, akses selamanya dan dapatkan sertifikat",
-        href: "/program/online-course",
+        href: "/course",
         icon: <FaVideo />,
         isReleased: true,
       },
@@ -97,7 +104,7 @@ const LINKS_FOOTER = [
     items: [
       {
         title: "Online Course",
-        href: "/program/online-course",
+        href: "/course",
       },
       {
         title: "Bootcamp",
@@ -131,7 +138,7 @@ const LINKS_FOOTER = [
     items: [
       {
         title: "Hubungi Kami",
-        href: "#",
+        href: "/contact",
       },
       {
         title: "Syarat dan Ketentuan",
@@ -160,6 +167,7 @@ const LINKS_SOCIAL = [
 
 const MainLayout = (props: PropTypes) => {
   const { children } = props;
+  const router = useRouter();
   const [scrollHeight, setScrollHeight] = useState(0);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [sidebarItemOpen, setSidebarItemOpen] = useState("");
@@ -213,7 +221,12 @@ const MainLayout = (props: PropTypes) => {
                 {item.type === "link" ? (
                   <Link
                     href={item.href as string}
-                    className="flex items-center gap-2 text-base font-medium text-neutral-500 transition-all hover:text-neutral-600"
+                    className={cn(
+                      "flex items-center gap-2 text-base font-medium text-neutral-500 transition-all hover:text-wpu-primary",
+                      {
+                        "text-wpu-primary": item.href === router.pathname,
+                      },
+                    )}
                   >
                     {item.title}
                   </Link>
@@ -426,7 +439,7 @@ const MainLayout = (props: PropTypes) => {
           Contact Support
         </span>
       </Link>
-      <footer className="m-4 rounded-2xl bg-neutral-800 text-white md:m-8">
+      <footer className="m-4 mt-16 rounded-2xl bg-neutral-800 text-white md:m-8 md:mt-32">
         <div className="container mx-auto flex flex-col gap-8 px-6 py-8 md:py-12">
           <div className="flex w-full flex-col gap-8 md:flex-row md:gap-20">
             <div className="flex w-full flex-col gap-2 md:w-1/3">
@@ -436,20 +449,15 @@ const MainLayout = (props: PropTypes) => {
                 width={180}
                 height={100}
               />
-              <p className="mt-4 text-sm text-neutral-300 lg:text-base">
-                Jl. Deme No.37, Cibangkong, Batununggal, Kota Bandung, Jawa
-                Barat, Indonesia 40273
+              <p>
+                WPU Course adalah platform pembelajaran untuk membantu kamu
+                menjadi digital talent terbaik.
               </p>
-
               <div className="mt-4 flex flex-col items-start gap-4 xl:flex-row">
-                <Link
-                  href="mailto:info@wpucourse.id"
-                  target="_blank"
-                  className="flex items-center justify-center gap-1 text-sm text-neutral-300"
-                >
-                  <MdEmail className="text-2xl" />
-                  <p>info@wpucourse.id</p>
-                </Link>
+                <div className="flex items-center justify-center gap-1 text-sm text-neutral-300">
+                  <FaLocationDot className="text-2xl" />
+                  <p> Bandung, Indonesia</p>
+                </div>
                 <Link
                   href="https://wa.me/6285190062005"
                   target="_blank"
