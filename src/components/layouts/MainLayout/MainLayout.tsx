@@ -47,7 +47,7 @@ const LINKS = [
       {
         title: "Bootcamp",
         description:
-          "Belajar secara interaktif untuk tingkatkan kemampuan digital anda",
+          "Belajar secara interaktif untuk tingkatkan kemampuan digital kamu",
         href: "#",
         icon: <FaBookOpen />,
         isReleased: false,
@@ -55,7 +55,7 @@ const LINKS = [
       {
         title: "Corporate Training",
         description:
-          "Tingkatkan kemampuan melalui pelatihan untuk perusahaan anda",
+          "Tingkatkan kemampuan melalui pelatihan untuk perusahaan kamu",
         href: "#",
         icon: <IoBusiness />,
         isReleased: false,
@@ -77,12 +77,17 @@ const LINKS = [
       {
         title: "Blog",
         description:
-          "Temukan berbagai artikel dan tips untuk meningkatkan kemampuan digital anda",
+          "Temukan berbagai artikel dan tips untuk meningkatkan kemampuan digital kamu",
         href: "#",
         icon: <FaNewspaper />,
         isReleased: false,
       },
     ],
+  },
+  {
+    title: "Kontak",
+    type: "link",
+    href: "/contact",
   },
 ];
 
@@ -190,13 +195,15 @@ const MainLayout = (props: PropTypes) => {
             },
           )}
         >
-          <Image
-            src="/general/logo-full.png"
-            alt="logo"
-            width={120}
-            height={100}
-            className="h-8 w-fit md:h-12"
-          />
+          <Link href="/">
+            <Image
+              src="/general/logo-full.png"
+              alt="logo"
+              width={120}
+              height={100}
+              className="h-8 w-fit md:h-12"
+            />
+          </Link>
           <div className="hidden h-full items-center gap-8 md:flex">
             {LINKS.map((item) => (
               <div
@@ -217,7 +224,7 @@ const MainLayout = (props: PropTypes) => {
                       <IoChevronDownOutline className="transition-all group-hover:rotate-180" />
                     </div>
                     <div className="absolute left-0 right-0 top-full mx-auto hidden w-4/5 animate-navbar rounded-xl p-3 transition-all group-hover:block">
-                      <div className="container rounded-2xl border-2 border-gray-100 bg-white bg-opacity-95 p-8 shadow-lg">
+                      <div className="container rounded-2xl border-2 border-gray-100 bg-white p-8 shadow-lg">
                         <h2 className="mb-4 text-xl font-bold">{item.title}</h2>
                         <div className="grid grid-cols-3 gap-6">
                           {item.type === "dropdown" &&

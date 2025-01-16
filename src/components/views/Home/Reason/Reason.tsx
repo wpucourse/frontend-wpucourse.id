@@ -3,7 +3,7 @@ import { FaChalkboardTeacher, FaDiscord, FaRegFileVideo } from "react-icons/fa";
 
 const Reason = () => {
   return (
-    <section className="mb-16 px-4 lg:px-0">
+    <section id="reason" className="px-4 lg:px-0">
       <div
         className="container rounded-2xl bg-wpu-primary bg-cover bg-center p-8 text-white lg:p-16"
         style={{ backgroundImage: 'url("/home/bg-reason.png")' }}

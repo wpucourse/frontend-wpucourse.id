@@ -20,7 +20,7 @@ const ABOUT_FOUNDERS = [
 
 const About = () => {
   return (
-    <section id="#about" className="container mb-16 px-4 lg:px-0">
+    <section id="#about" className="container px-4 lg:px-0">
       <h1 className="mb-2 text-4xl font-bold text-wpu-primary lg:text-5xl">
         Meet Our Founder
       </h1>

@@ -69,7 +69,10 @@ const ReviewCard = ({ name, body }: { name: string; body: string }) => {
 
 function Testimonial() {
   return (
-    <section className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden">
+    <section
+      id="testimonial"
+      className="relative mb-16 flex h-[500px] w-full flex-col items-center justify-center overflow-hidden"
+    >
       <div className="container px-4 lg:px-0">
         <h1 className="mb-2 text-4xl font-bold text-wpu-primary lg:text-5xl">
           Testimonial

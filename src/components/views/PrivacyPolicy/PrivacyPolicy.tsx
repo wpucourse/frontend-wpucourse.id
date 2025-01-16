@@ -1,18 +1,11 @@
-import Image from 'next/image';
-import { PRIVACY_POLICY } from './Tnc.constants';
+import Image from "next/image";
+import { PRIVACY_POLICY } from "./Tnc.constants";
 
 const PrivacyPolicy = () => {
   return (
-    <main className="py-8">
-      <div className="container mx-auto lg:px-32 w-full relative flex flex-col items-center justify-center antialiased">
-        <Image
-          width={200}
-          height={100}
-          src="/general/logo-full.png"
-          alt="logo"
-          className="mx-auto w-1/2 lg:w-64"
-        />
-        <h1 className="text-2xl lg:text-5xl font-bold my-4 lg:mb-8">
+    <main className="px-4 py-16 pt-28 lg:px-0">
+      <div className="container relative mx-auto flex w-full flex-col items-center justify-center antialiased lg:px-32">
+        <h1 className="my-4 text-2xl font-bold lg:mb-8 lg:text-5xl">
           Kebijakan Privasi
         </h1>
         {PRIVACY_POLICY.map((item) => (
