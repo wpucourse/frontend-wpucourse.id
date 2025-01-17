@@ -9,7 +9,7 @@ import { FaRegPaste } from "react-icons/fa6";
 const Discount = () => {
   const [successCopy, setSuccessCopy] = useState(false);
   const copyToClipboard = () => {
-    navigator.clipboard.writeText("WPU_COURSE_LAUNCH");
+    navigator.clipboard.writeText("??????");
     setSuccessCopy(true);
     setTimeout(() => {
       setSuccessCopy(false);
@@ -23,12 +23,12 @@ const Discount = () => {
           <div className="mb-1 flex items-center gap-2 text-xl font-bold text-wpu-primary lg:gap-4 lg:text-2xl">
             Belajar MERN Stack{" "}
             <div className="rounded-full bg-wpu-primary px-2 py-1 text-sm text-white">
-              86% Off
+              ??% Off
             </div>
           </div>
           <div className="flex items-center gap-2">
             <p className="line-through">Rp 2.500.000</p>
-            <p className="text-lg font-bold text-wpu-primary">Rp 350.000</p>
+            <p className="text-lg font-bold text-wpu-primary">Rp ???</p>
           </div>
           <Image
             className="mt-4 w-full rounded-lg border border-gray-100"
@@ -40,7 +40,6 @@ const Discount = () => {
         </div>
       </div>
       <div className="w-full lg:w-1/2">
-        <Countdown />
         <h1 className="mt-4 text-2xl font-bold leading-normal text-wpu-primary lg:text-4xl">
           Nikmati Penawaran Eksklusif dari WPU Course
         </h1>
@@ -62,7 +61,7 @@ const Discount = () => {
               "text-wpu-primary": successCopy,
             })}
           >
-            WPU_COURSE_LAUNCH
+            ??????
           </p>
           {successCopy ? (
             <FaRegCheckCircle className="text-xl text-wpu-primary" />
