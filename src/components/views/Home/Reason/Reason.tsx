@@ -8,7 +8,7 @@ const Reason = () => {
         className="container rounded-2xl bg-wpu-primary bg-cover bg-center p-8 text-white lg:p-16"
         style={{ backgroundImage: 'url("/home/bg-reason.png")' }}
       >
-        <h1 className="mb-4 text-center text-3xl font-extrabold lg:text-4xl">
+        <h1 className="mb-4 text-center text-2xl font-extrabold lg:text-4xl">
           Kenapa Harus Belajar Di WPU Course?
         </h1>
         <p className="mx-auto w-full text-center text-white/65 lg:w-2/3 lg:text-lg">
@@ -25,7 +25,7 @@ const Reason = () => {
                 <h4 className="text-lg font-semibold lg:text-2xl">
                   Mentor Terbaik
                 </h4>
-                <p className="text-white/65">
+                <p className="text-sm text-white/65 lg:text-base">
                   Belajar langsung bersama Pak Sandhika, Kang Avip, Kang Agung
                   dan mentor lainnya.
                 </p>
@@ -39,7 +39,7 @@ const Reason = () => {
                 <h4 className="text-lg font-semibold lg:text-2xl">
                   Akses Selamanya
                 </h4>
-                <p className="text-white/65">
+                <p className="text-sm text-white/65 lg:text-base">
                   Sekali beli course, kamu bisa akses selamanya tanpa batas
                   waktu.
                 </p>
@@ -53,7 +53,7 @@ const Reason = () => {
                 <h4 className="text-lg font-semibold lg:text-2xl">
                   Connect Komunitas IT Terbesar
                 </h4>
-                <p className="text-white/65">
+                <p className="text-sm text-white/65 lg:text-base">
                   WPU memiliki komunitas IT terbesar dengan jumlah lebih dari
                   50.000 member.
                 </p>

@@ -117,10 +117,10 @@ const Hero = () => {
               Lihat penawaran eksklusif kami <FaArrowRightLong />
             </Link>
           </div>
-          <h1 className="inline-block bg-gradient-to-r from-blue-500 via-green-500 to-wpu-primary bg-clip-text text-center text-4xl font-bold text-transparent md:py-2 md:text-6xl">
+          <h1 className="inline-block bg-gradient-to-r from-blue-500 via-green-500 to-wpu-primary bg-clip-text text-center text-3xl font-bold text-transparent md:py-2 md:text-6xl">
             Belajar Bersama Kami
           </h1>
-          <h1 className="text-center text-4xl font-bold md:text-6xl">
+          <h1 className="text-center text-3xl font-bold md:text-6xl">
             Jadi Talenta Digital Terbaik
           </h1>
           <p className="mx-auto mt-4 text-center text-xl font-medium md:w-2/3">

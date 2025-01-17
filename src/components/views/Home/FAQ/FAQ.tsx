@@ -56,7 +56,7 @@ const FAQ = () => {
   const [openedQuestion, setOpenedQuestion] = useState<string | null>(null);
   return (
     <section className="container px-4 lg:px-0">
-      <h1 className="mb-8 text-center text-4xl font-bold text-wpu-primary lg:mb-12 lg:text-5xl">
+      <h1 className="mb-8 text-center text-3xl font-bold text-wpu-primary lg:mb-12 lg:text-5xl">
         Frequently Asked Questions
       </h1>
       <div className="mt-8 grid grid-cols-1 gap-4 lg:grid-cols-2">
@@ -75,7 +75,7 @@ const FAQ = () => {
                 }
               }}
             >
-              <h4 className="text-lg font-semibold">{item.question}</h4>
+              <h4 className="font-semibold lg:text-lg">{item.question}</h4>
               <FaChevronDown
                 className={cn({ "rotate-180": openedQuestion === item.id })}
               />

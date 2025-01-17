@@ -21,10 +21,10 @@ const ABOUT_FOUNDERS = [
 const About = () => {
   return (
     <section id="#about" className="container px-4 lg:px-0">
-      <h1 className="mb-2 text-4xl font-bold text-wpu-primary lg:text-5xl">
+      <h1 className="mb-2 text-3xl font-bold text-wpu-primary lg:text-5xl">
         Meet Our Founder
       </h1>
-      <p className="mb-4 text-lg text-gray-700">
+      <p className="mb-4 text-gray-700 lg:text-lg">
         Bertemu dengan para founder WPU Course yang berpengalaman di bidang
         teknologi dan memiliki passion mengajar.
       </p>

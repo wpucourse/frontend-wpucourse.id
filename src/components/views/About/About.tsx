@@ -87,10 +87,10 @@ const About = () => {
   return (
     <main className="container px-4 py-16 pt-32 lg:px-0">
       <section>
-        <h1 className="mb-8 text-center text-5xl font-bold text-wpu-primary">
+        <h1 className="mb-4 text-center text-4xl font-bold text-wpu-primary lg:mb-8 lg:text-5xl">
           Tentang Kami
         </h1>
-        <p className="mx-auto mb-8 w-full text-center text-lg text-gray-700 lg:w-3/4">
+        <p className="mx-auto mb-8 w-full text-center text-gray-700 lg:w-3/4 lg:text-lg">
           WPU Course adalah sebuah platform pembelajaran digital yang dibuat
           untuk memudahkan kamu dalam belajar di bidang teknologi dan digital.
           Kami menyediakan berbagai macam course yang dapat membantu kamu dalam
@@ -101,14 +101,14 @@ const About = () => {
           alt="about"
           width={1920}
           height={1080}
-          className="mx-auto w-3/4"
+          className="mx-auto w-full lg:w-3/4"
         />
       </section>
       <section className="mt-32">
-        <h1 className="mb-4 text-center text-4xl font-bold text-wpu-primary">
+        <h1 className="mb-4 text-center text-3xl font-bold text-wpu-primary lg:text-4xl">
           Meet Our Founder
         </h1>
-        <p className="mx-auto mb-4 w-full text-center text-lg text-gray-700 lg:w-3/4">
+        <p className="mx-auto mb-4 w-full text-center text-gray-700 lg:w-3/4 lg:text-lg">
           Bertemu dengan para founder WPU Course yang berpengalaman di bidang
           teknologi dan memiliki passion mengajar, memastikan WPU Course bisa
           memberikan pelayanan yang terbaik.
@@ -125,13 +125,15 @@ const About = () => {
                 alt={founder.name}
               />
               <div className="lg:w-3/5">
-                <p className="mb-2 text-xl font-medium text-wpu-primary">
+                <p className="mb-2 text-lg font-medium text-wpu-primary lg:text-xl">
                   {founder.role}
                 </p>
-                <h2 className="mb-4 text-5xl font-bold text-gray-700">
+                <h2 className="mb-4 text-4xl font-bold text-gray-700 lg:text-5xl">
                   {founder.name}
                 </h2>
-                <p className="mb-4 text-gray-600">{founder.description}</p>
+                <p className="mb-4 leading-relaxed text-gray-600 lg:text-lg">
+                  {founder.description}
+                </p>
                 <div className="flex gap-4 text-gray-600">
                   {founder.socials.map((social) => (
                     <Link

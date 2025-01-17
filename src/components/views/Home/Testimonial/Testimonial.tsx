@@ -74,10 +74,10 @@ function Testimonial() {
       className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden"
     >
       <div className="container px-4 lg:px-0">
-        <h1 className="mb-2 text-4xl font-bold text-wpu-primary lg:text-5xl">
+        <h1 className="mb-2 text-3xl font-bold text-wpu-primary lg:text-5xl">
           Testimonial
         </h1>
-        <p className="mb-4 text-lg text-gray-700">
+        <p className="mb-4 text-gray-700 lg:text-lg">
           Kami percaya bahwa pengalaman terbaik datang dari student yang telah
           menyelesaikan course di WPU Course.
         </p>

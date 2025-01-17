@@ -183,6 +183,11 @@ const MainLayout = (props: PropTypes) => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  useEffect(() => {
+    setSidebarOpen(false);
+  }, [router.asPath]);
+
   return (
     <main className={`${plusJakartaSans.className} relative`}>
       <header
@@ -209,7 +214,7 @@ const MainLayout = (props: PropTypes) => {
               alt="logo"
               width={120}
               height={100}
-              className="h-8 w-fit md:h-12"
+              className="h-8 w-auto md:h-12"
             />
           </Link>
           <div className="hidden h-full items-center gap-8 md:flex">
@@ -339,7 +344,9 @@ const MainLayout = (props: PropTypes) => {
                     {item.type === "link" ? (
                       <Link
                         href={item.href as string}
-                        className="w-full font-semibold"
+                        className={cn("w-full font-semibold", {
+                          "text-wpu-primary": item.href === router.pathname,
+                        })}
                       >
                         {item.title}
                       </Link>
@@ -449,7 +456,7 @@ const MainLayout = (props: PropTypes) => {
                 width={180}
                 height={100}
               />
-              <p>
+              <p className="mt-4 text-sm leading-relaxed lg:text-base">
                 WPU Course adalah platform pembelajaran untuk membantu kamu
                 menjadi digital talent terbaik.
               </p>
