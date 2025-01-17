@@ -20,7 +20,7 @@ const Discount = () => {
       <div id="offer" className="absolute -top-[300px]" />
       <div className="w-full lg:w-1/2">
         <div className="flex-1 rounded-2xl border-2 border-gray-100 bg-white p-5 pt-8">
-          <div className="mb-1 flex items-center gap-4 text-2xl font-bold text-wpu-primary">
+          <div className="mb-1 flex items-center gap-2 text-xl font-bold text-wpu-primary lg:gap-4 lg:text-2xl">
             Belajar MERN Stack{" "}
             <div className="rounded-full bg-wpu-primary px-2 py-1 text-sm text-white">
               86% Off
