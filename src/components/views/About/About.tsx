@@ -58,7 +58,7 @@ const ABOUT_FOUNDERS = [
     role: "Chief Technology Officer",
     image: "/about/agung-1.png",
     description:
-      "Kang Agung merupakan software engineer dengan pengalaman lebih dari 10 tahun di top IT company yang telah memiliki pengalaman dibidang web development menggunakan teknologi Javascript, selain itu juga berpengalaman menjadi instruktur bootcamp dan menjadi asisten dosen serta ktif membagikan pengalaman dan tutorial di sosial media.",
+      "Kang Agung merupakan software engineer dengan pengalaman lebih dari 10 tahun di top IT company yang telah memiliki pengalaman dibidang web development menggunakan teknologi Javascript, selain itu juga berpengalaman menjadi instruktur bootcamp dan menjadi asisten dosen serta aktif membagikan pengalaman dan tutorial di sosial media.",
     socials: [
       {
         title: "linkedin",
