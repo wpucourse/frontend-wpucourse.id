@@ -1,3 +1,4 @@
+import ConfettiSideCannons from "@/components/common/Confetti";
 import GridPattern from "@/components/common/GridPattern/GridPattern";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
@@ -133,6 +134,7 @@ const Hero = () => {
           >
             Belajar Sekarang
           </Link>
+          <ConfettiSideCannons />
         </div>
         {IMAGES_BG.map((item) => (
           <Image
