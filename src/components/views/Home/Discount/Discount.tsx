@@ -40,6 +40,7 @@ const Discount = () => {
         </div>
       </div>
       <div className="w-full lg:w-1/2">
+        <Countdown />
         <h1 className="mt-4 text-2xl font-bold leading-normal text-wpu-primary lg:text-4xl">
           Nikmati Penawaran Eksklusif dari WPU Course
         </h1>
