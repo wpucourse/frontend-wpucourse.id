@@ -1,4 +1,4 @@
-Sitemap: https://necrowhisper.samudrainteractive.com/sitemap.xml
+Sitemap: https://wpucourse.id/sitemap.xml
 
 User-agent: *
 Allow: /*
