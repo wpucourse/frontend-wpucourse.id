@@ -1,5 +1,6 @@
 import Countdown from "@/components/common/Countdown";
 import Image from "next/image";
+import Link from "next/link";
 import { FaPencilRuler } from "react-icons/fa";
 
 const Featured = () => {
@@ -36,9 +37,11 @@ const Featured = () => {
           meningkatkan kemampuan dan keterampilan kamu. Dari course dasar hingga
           course lanjutan.
         </p>
-        <button className="mt-5 rounded-xl border bg-wpu-primary px-4 py-3 text-center font-semibold text-white">
-          Lihat Katalog Course
-        </button>
+        <Link href="/course">
+          <button className="mt-5 rounded-xl border bg-wpu-primary px-4 py-3 text-center font-semibold text-white">
+            Lihat Katalog Course
+          </button>
+        </Link>
       </div>
     </section>
   );

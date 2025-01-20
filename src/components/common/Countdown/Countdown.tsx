@@ -69,11 +69,11 @@ const CountdownItem = ({ unit, text }: { unit: string; text: string }) => {
   return (
     <div className="flex h-16 w-1/5 flex-col items-center justify-center gap-1 border-r-[1px] border-slate-200 last:border-r-0 md:h-24 md:gap-2">
       <div className="relative w-full overflow-hidden text-center">
-        <span ref={ref} className="block text-4xl font-medium text-black">
+        <span ref={ref} className="block text-4xl font-medium text-gray-700">
           {time}
         </span>
       </div>
-      <span className="text-xs font-light text-slate-500 md:text-sm lg:text-base">
+      <span className="text-xs font-light text-gray-500 md:text-sm lg:text-base">
         {text}
       </span>
     </div>

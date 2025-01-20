@@ -26,7 +26,7 @@ const Course = () => {
               </p>
               <p className="text-lg font-bold text-gray-600">Rp 350.000</p>
             </div>
-            <div className="mt-2 font-bold text-gray-500">140 Enrolled</div>
+            <div className="mt-2 font-bold text-gray-500">300+ Enrolled</div>
           </div>
         </Link>
       </div>

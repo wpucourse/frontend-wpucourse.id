@@ -1,22 +1,5 @@
 import Image from "next/image";
-
-const ABOUT_FOUNDERS = [
-  {
-    name: "Avip Syaifulloh",
-    role: "Chief Executive Officer",
-    image: "/about/avip-1.png",
-  },
-  {
-    name: "Sandhika Galih",
-    role: "Chief Academic Officer",
-    image: "/about/sandhika-1.png",
-  },
-  {
-    name: "Agung Rizkyana",
-    role: "Chief Technology Officer",
-    image: "/about/agung-1.png",
-  },
-];
+import { ABOUT_FOUNDERS } from "../Home.constants";
 
 const About = () => {
   return (

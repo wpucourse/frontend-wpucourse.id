@@ -15,6 +15,7 @@ const Discount = () => {
       setSuccessCopy(false);
     }, 3000);
   };
+
   return (
     <section className="container relative flex flex-col items-center gap-16 px-4 lg:flex-row lg:px-0">
       <div id="offer" className="absolute -top-[300px]" />
@@ -27,7 +28,7 @@ const Discount = () => {
             </div>
           </div>
           <div className="flex items-center gap-2">
-            <p className="line-through">Rp 2.500.000</p>
+            <p className="text-gray-500 line-through">Rp 2.500.000</p>
             <p className="text-lg font-bold text-wpu-primary">Rp 350.000</p>
           </div>
           <Image

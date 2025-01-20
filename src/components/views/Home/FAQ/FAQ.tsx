@@ -1,56 +1,7 @@
 import { cn } from "@/lib/utils";
 import { useState } from "react";
 import { FaChevronDown } from "react-icons/fa6";
-
-const FAQ_LISTS = [
-  {
-    id: "1",
-    question: "Apakah pembelajaran dilakukan secara online?",
-    answer: "Benar, pembelajaran dilakukan sepenuhnya secara online.",
-  },
-  {
-    id: "2",
-    question: "Apakah ada jadwal belajar yang tetap?",
-    answer:
-      "Tidak ada. Kamu dapat belajar sesuai dengan waktu luang Kamu, tanpa terikat jadwal tertentu.",
-  },
-  {
-    id: "3",
-    question: "Bagaimana proses pembelajarannya?",
-    answer:
-      "Kamu dapat mempelajari materi melalui video pembelajaran yang telah disediakan, kemudian mempraktikkannya secara mandiri.",
-  },
-  {
-    id: "4",
-    question: "Apakah ada sesi tatap muka online dengan mentor?",
-    answer:
-      "Ada, tetapi hanya untuk sesi tanya jawab. Penyampaian materi pembelajaran dilakukan melalui video.",
-  },
-  {
-    id: "5",
-    question: "Apakah materi pembelajaran dapat diunduh?",
-    answer: "Maaf, saat ini materi pembelajaran tidak dapat diunduh.",
-  },
-  {
-    id: "6",
-    question: "Apakah ada batasan waktu akses untuk program ini?",
-    answer:
-      "Tidak ada. Kamu dapat mengakses semua materi pembelajaran selamanya, selama program ini masih beroperasi.",
-  },
-  {
-    id: "7",
-    question:
-      "Bagaimana jika saya mengalami kesulitan selama proses pembelajaran?",
-    answer:
-      "Kamu dapat mengajukan pertanyaan melalui komunitas discord eksklusif untuk member belajarmern.",
-  },
-  {
-    id: "8",
-    question: "Apakah ada grup khusus untuk berinteraksi dengan sesama member?",
-    answer:
-      "Ya, tersedia grup diskusi yang dapat digunakan untuk berinteraksi dan berbagi informasi dengan sesama member.",
-  },
-];
+import { FAQ_LISTS } from "../Home.constants";
 
 const FAQ = () => {
   const [openedQuestion, setOpenedQuestion] = useState<string | null>(null);

@@ -13,8 +13,6 @@ const useScreenHeight = (ref: RefObject<HTMLDivElement>) => {
 
     if (element) {
       element.addEventListener("scroll", onScroll, { passive: true });
-
-      // Clean-up
       return () => element.removeEventListener("scroll", onScroll);
     }
   }, []);
