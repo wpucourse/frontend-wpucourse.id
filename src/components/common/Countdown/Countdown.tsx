@@ -6,8 +6,8 @@ const MINUTE = SECOND * 60;
 const HOUR = MINUTE * 60;
 const DAY = HOUR * 24;
 
-const COUNTDOWN_FROM = new Date().setHours(23, 59, 59, 999);
-// const COUNTDOWN_FROM = new Date("2025-01-24T23:59:59");
+// const COUNTDOWN_FROM = new Date().setHours(23, 59, 59, 999);
+const COUNTDOWN_FROM = new Date("2025-02-01T23:59:59");
 
 const useTimer = (unit: string) => {
   const [ref, animate] = useAnimate();
