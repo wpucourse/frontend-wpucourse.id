@@ -5,12 +5,13 @@ import Hero from "./Hero";
 import Discount from "./Discount";
 import Featured from "./Featured";
 import FAQ from "./FAQ";
+import { ICourse } from "@/types/course";
 
-const Home = () => {
+const Home = ({ course }: { course: ICourse }) => {
   return (
     <div className="flex flex-col gap-16 lg:gap-32">
       <Hero />
-      <Discount />
+      <Discount course={course} />
       <Reason />
       <About />
       <Featured />

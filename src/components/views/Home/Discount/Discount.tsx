@@ -1,15 +1,16 @@
 import Countdown from "@/components/common/Countdown";
 import { cn } from "@/lib/utils";
+import { ICourse } from "@/types/course";
+import { convertIDR } from "@/utils/currency";
 import Image from "next/image";
 import { useState } from "react";
-import { CiCircleCheck, CiMedicalClipboard } from "react-icons/ci";
-import { FaPaste, FaRegCheckCircle } from "react-icons/fa";
+import { FaRegCheckCircle } from "react-icons/fa";
 import { FaRegPaste } from "react-icons/fa6";
 
-const Discount = () => {
+const Discount = ({ course }: { course: ICourse }) => {
   const [successCopy, setSuccessCopy] = useState(false);
   const copyToClipboard = () => {
-    navigator.clipboard.writeText("WPUCOURSELAUNCH");
+    navigator.clipboard.writeText(course?.voucher);
     setSuccessCopy(true);
     setTimeout(() => {
       setSuccessCopy(false);
@@ -22,18 +23,24 @@ const Discount = () => {
       <div className="w-full lg:w-1/2">
         <div className="flex-1 rounded-2xl border-2 border-gray-100 bg-white p-5 pt-8">
           <div className="mb-1 flex items-center gap-2 text-xl font-bold text-wpu-primary lg:gap-4 lg:text-2xl">
-            Belajar MERN Stack{" "}
+            {course?.title}
             <div className="rounded-full bg-wpu-primary px-2 py-1 text-sm text-white">
-              86% Off
+              {course?.discount} Off
             </div>
           </div>
           <div className="flex items-center gap-2">
-            <p className="text-gray-500 line-through">Rp 2.500.000</p>
-            <p className="text-lg font-bold text-wpu-primary">Rp 350.000</p>
+            <p className="text-gray-500 line-through">
+              {convertIDR(course?.price)}
+            </p>
+            <p className="text-lg font-bold text-wpu-primary">
+              {convertIDR(
+                course?.price - (course?.price * course?.discount) / 100,
+              )}
+            </p>
           </div>
           <Image
             className="mt-4 w-full rounded-lg border border-gray-100"
-            src="/general/cover-belajar-mern.webp"
+            src={course?.cover}
             width={500}
             height={500}
             alt="mern"
@@ -63,7 +70,7 @@ const Discount = () => {
               "text-wpu-primary": successCopy,
             })}
           >
-            WPUCOURSELAUNCH
+            {course?.voucher}
           </p>
           {successCopy ? (
             <FaRegCheckCircle className="text-xl text-wpu-primary" />
