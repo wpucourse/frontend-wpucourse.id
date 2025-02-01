@@ -7,7 +7,7 @@ import Featured from "./Featured";
 import FAQ from "./FAQ";
 import { ICourse } from "@/types/course";
 
-const Home = ({ course }: { course: ICourse }) => {
+const Home = ({ course }: { course: ICourse[] }) => {
   return (
     <div className="flex flex-col gap-16 lg:gap-32">
       <Hero />

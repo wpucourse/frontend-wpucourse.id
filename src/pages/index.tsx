@@ -2,11 +2,7 @@ import Header from "@/components/common/Header";
 import Home from "@/components/views/Home";
 import { ICourse } from "@/types/course";
 
-interface PropTypes {
-  course: ICourse;
-}
-
-export default function HomePage({ course }: PropTypes) {
+export default function HomePage({ course }: { course: ICourse }) {
   return (
     <>
       <Header
