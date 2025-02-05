@@ -1,4 +1,5 @@
 import Header from "@/components/common/Header";
+import SmoothScrolling from "@/components/common/SmoothScrolling";
 import Home from "@/components/views/Home";
 import { ICourse } from "@/types/course";
 

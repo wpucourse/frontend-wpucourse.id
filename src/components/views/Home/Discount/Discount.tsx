@@ -25,7 +25,7 @@ const Discount = ({ course }: { course: ICourse }) => {
           <div className="mb-1 flex items-center gap-2 text-xl font-bold text-wpu-primary lg:gap-4 lg:text-2xl">
             {course?.title}
             <div className="rounded-full bg-wpu-primary px-2 py-1 text-sm text-white">
-              {course?.discount} Off
+              {course?.discount}% Off
             </div>
           </div>
           <div className="flex items-center gap-2">
