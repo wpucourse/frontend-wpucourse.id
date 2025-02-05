@@ -9,7 +9,7 @@ import { RiCloseLargeFill } from "react-icons/ri";
 const responses = [
   {
     keyword: /^halo|hi|kembali ke menu utama$/i,
-    response: "Halo saya Kang Apip WPU, apa yang ingin kamu tanyakan?",
+    response: "Halo saya Kang APIP WPU, apa yang ingin kamu tanyakan?",
     option: ["Pembayaran", "Course", "Login & Registrasi", "Chat Admin"],
   },
   {
@@ -188,7 +188,7 @@ const Chatbot = () => {
   const [conversation, setConversation] = useState([
     {
       role: "system",
-      content: "Halo saya Kang Apip WPU, apa yang ingin kamu tanyakan?",
+      content: "Halo saya Kang APIP WPU, apa yang ingin kamu tanyakan?",
       option: ["Pembayaran", "Course", "Login & Registrasi", "Chat Admin"],
     },
   ]);
@@ -261,7 +261,7 @@ const Chatbot = () => {
             className="h-12 w-12 rounded-full object-cover"
           />
           <div>
-            <h1 className="font-bold text-white">Kang Apip WPU</h1>
+            <h1 className="font-bold text-white">Kang APIP WPU</h1>
             <p className="text-sm text-gray-100">
               Asisten Pintar & Interaktif Platform WPU
             </p>
