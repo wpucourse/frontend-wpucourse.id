@@ -19,25 +19,32 @@ export default function HomePage({ course }: { course: ICourse }) {
 }
 
 export async function getServerSideProps() {
-  const { data } = await fetch(
-    "https://api-platform.wpucourse.id/api/v1/courses?limit=1&page=1",
-  )
-    .then((res) => res.json())
-    .then((res) => res.data);
-
-  const course = {
-    cover: data[0].cover,
-    title: data[0].title,
-    price: data[0].price,
-    slug: data[0].slug,
-    website: data[0].website,
-    description: data[0].description,
-    voucher: data[0].voucher.code,
-    discount: data[0].voucher.discount,
-  };
-  return {
-    props: {
-      course,
-    },
-  };
+  try {
+    const res = await fetch(
+      "https://api-platform.wpucourse.id/api/v1/courses?limit=1&page=1",
+    )
+      .then((res) => res.json())
+      .then((res) => res.data);
+    const course = {
+      cover: res.data[0].cover,
+      title: res.data[0].title,
+      price: res.data[0].price,
+      slug: res.data[0].slug,
+      website: res.data[0].website,
+      description: res.data[0].description,
+      voucher: res.data[0].voucher.code,
+      discount: res.data[0].voucher.discount,
+    };
+    return {
+      props: {
+        course,
+      },
+    };
+  } catch (error) {
+    return {
+      props: {
+        course: {},
+      },
+    };
+  }
 }

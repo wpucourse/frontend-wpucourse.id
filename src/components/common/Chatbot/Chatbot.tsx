@@ -32,7 +32,7 @@ const responses = [
   // payment
   {
     keyword: /^pembayaran$/i,
-    response: "Masalah pembayaran apa yang kamu alami?",
+    response: "Ada yang bisa kami bantu terkait pembayaran?",
     option: [
       "Sudah bayar tapi tidak bisa akses course",
       "Metode pembayaran yang bisa digunakan",
@@ -294,7 +294,7 @@ const Chatbot = () => {
                   {item?.option.map((item, index) => (
                     <button
                       key={index}
-                      className="flex items-center gap-2 rounded-full border border-wpu-primary px-3 py-1 text-sm text-wpu-primary hover:bg-gray-100"
+                      className="flex items-center gap-2 rounded-full border border-wpu-primary px-3 py-1 text-xs text-wpu-primary hover:bg-gray-100 lg:text-sm"
                       onClick={() => handleChat(item)}
                     >
                       {item}
