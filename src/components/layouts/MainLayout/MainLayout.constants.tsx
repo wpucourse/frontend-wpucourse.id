@@ -65,9 +65,9 @@ const LINK_NAVBAR = [
         title: "Blog",
         description:
           "Temukan berbagai artikel dan tips untuk meningkatkan kemampuan digital kamu",
-        href: "#",
+        href: "/blog",
         icon: <FaNewspaper />,
-        isReleased: false,
+        isReleased: true,
       },
     ],
   },

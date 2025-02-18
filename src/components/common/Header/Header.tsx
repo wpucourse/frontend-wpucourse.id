@@ -5,10 +5,18 @@ interface PropTypes {
   title: string;
   page: string;
   keywords: string;
+  author?: string;
 }
 
 const Header = (props: PropTypes) => {
-  const { canonical, description, title, page, keywords } = props;
+  const {
+    canonical,
+    description,
+    title,
+    page,
+    keywords,
+    author = "WPU Course",
+  } = props;
 
   return (
     <Head>
@@ -17,7 +25,7 @@ const Header = (props: PropTypes) => {
       <meta name="title" content={title}></meta>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-      <meta name="author" content="WPU Course" />
+      <meta name="author" content={author} />
       <meta property="og:type" content={page} />
       <meta property="og:title" content={title} />
       <meta property="og:site_name" content="wpucourse.id" />

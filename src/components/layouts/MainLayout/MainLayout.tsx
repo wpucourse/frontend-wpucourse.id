@@ -1,11 +1,10 @@
 import { ReactNode, useEffect, useState } from "react";
 import { Plus_Jakarta_Sans } from "next/font/google";
-import { useRouter } from "next/router";
 import MainLayoutNavbar from "./MainLayoutNavbar";
 import MainLayoutFooter from "./MainLayoutFooter";
-import { HiChatBubbleBottomCenterText } from "react-icons/hi2";
-import { RiCloseLargeFill } from "react-icons/ri";
 import Chatbot from "@/components/common/Chatbot";
+import { LoadingBarContainer, useLoadingBar } from "react-top-loading-bar";
+import { Router } from "next/router";
 
 interface PropTypes {
   children: ReactNode;
@@ -19,6 +18,15 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 const MainLayout = (props: PropTypes) => {
   const { children } = props;
   const [scrollHeight, setScrollHeight] = useState(0);
+
+  const { start, complete } = useLoadingBar({
+    color: "#008080",
+    height: 2,
+  });
+
+  Router.events.on("routeChangeStart", () => start());
+  Router.events.on("routeChangeComplete", () => complete());
+  Router.events.on("routeChangeError", () => complete());
 
   useEffect(() => {
     function handleScroll() {

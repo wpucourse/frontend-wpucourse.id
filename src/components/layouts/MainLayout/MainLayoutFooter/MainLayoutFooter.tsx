@@ -6,8 +6,8 @@ import { LINKS_FOOTER, LINKS_SOCIAL } from "../MainLayout.constants";
 
 const MainLayoutFooter = () => {
   return (
-    <footer className="m-4 mt-16 rounded-2xl bg-neutral-800 text-white md:m-8 md:mt-32">
-      <div className="container mx-auto flex flex-col gap-8 px-6 py-8 md:py-12">
+    <footer className="container mx-auto mt-16 bg-neutral-800 text-white md:mt-32 lg:mb-8 lg:rounded-2xl">
+      <div className="flex flex-col gap-8 px-6 py-8 md:px-12 md:py-12">
         <div className="flex w-full flex-col gap-8 md:flex-row md:gap-20">
           <div className="flex w-full flex-col gap-2 md:w-1/3">
             <Image

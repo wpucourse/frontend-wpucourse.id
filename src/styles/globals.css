@@ -1,4 +1,65 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-  
+
+.blog h1,
+.blog h2,
+.blog h3,
+.blog h4,
+.blog h5,
+.blog h6 {
+  @apply mb-4 mt-8 font-bold;
+}
+
+.blog h1 {
+  @apply text-3xl;
+}
+
+.blog h2 {
+  @apply text-2xl;
+}
+
+.blog h3 {
+  @apply text-xl;
+}
+
+.blog h4 {
+  @apply text-base;
+}
+
+.blog h5 {
+  @apply text-sm;
+}
+
+.blog h6 {
+  @apply text-xs;
+}
+
+.blog a {
+  @apply text-wpu-primary underline;
+}
+
+.blog a:hover {
+  @apply text-gray-600;
+}
+
+.blog ul,
+.blog ol {
+  @apply mb-4 list-inside list-disc pl-5;
+}
+
+.blog li {
+  @apply mb-2;
+}
+
+.blog blockquote {
+  @apply mb-4 border-l-4 border-gray-300 pl-4 italic text-gray-500;
+}
+
+.blog img {
+  @apply my-4 w-full rounded-lg;
+}
+
+.blog code {
+  @apply rounded bg-gray-100 px-1 py-0.5 text-wpu-primary;
+}
