@@ -3,7 +3,6 @@ import Link from "next/link";
 
 const Blog = (props: { articles: any }) => {
   const { articles } = props;
-  console.log(articles);
   return (
     <main className="container space-y-16 px-4 py-16 pt-32 lg:space-y-32 lg:px-0">
       <section className="flex min-h-[50vh] flex-col-reverse items-center gap-4 md:flex-row lg:gap-16">
