@@ -42,10 +42,10 @@ const MainLayoutNavbar = () => {
             alt="logo"
             width={120}
             height={100}
-            className="h-8 w-auto md:h-12"
+            className="h-8 w-auto lg:h-12"
           />
         </Link>
-        <div className="hidden h-full items-center gap-8 md:flex">
+        <div className="hidden h-full items-center gap-8 lg:flex">
           {LINK_NAVBAR.map((item) => (
             <div
               className="group flex h-full cursor-pointer items-center"
@@ -116,7 +116,7 @@ const MainLayoutNavbar = () => {
             </div>
           ))}
         </div>
-        <div className="hidden items-center gap-2 md:flex">
+        <div className="hidden items-center gap-2 lg:flex">
           <Link href="https://learn.wpucourse.id/auth/register" target="_blank">
             <button className="rounded-xl border border-wpu-primary px-4 py-2 font-bold text-wpu-primary hover:opacity-80">
               Daftar
@@ -130,7 +130,7 @@ const MainLayoutNavbar = () => {
         </div>
         <button
           onClick={() => setSidebarOpen(!sidebarOpen)}
-          className="flex flex-col items-center justify-center md:hidden"
+          className="flex flex-col items-center justify-center lg:hidden"
         >
           <span
             className={cn(
@@ -153,7 +153,7 @@ const MainLayoutNavbar = () => {
         </button>
         <div
           className={cn(
-            "absolute left-0 right-0 top-full mx-auto w-full animate-navbar py-4 transition-all duration-300 ease-out md:hidden",
+            "absolute left-0 right-0 top-full mx-auto w-full animate-navbar py-4 transition-all duration-300 ease-out lg:hidden",
             sidebarOpen ? "block" : "hidden",
             {
               "left-4 right-4 w-[calc(100%-2rem)]": scrollHeight > 20,

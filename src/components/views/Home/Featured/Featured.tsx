@@ -13,8 +13,8 @@ const Featured = () => {
         <Image
           className="mt-4 w-full rounded-3xl border border-gray-100"
           src="/images/bootcamp/wpuramadhan.png"
-          width={500}
-          height={500}
+          width={1920}
+          height={1080}
           alt="mern"
         />
       </div>

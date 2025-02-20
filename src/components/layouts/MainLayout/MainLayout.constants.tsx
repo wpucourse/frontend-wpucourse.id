@@ -65,9 +65,9 @@ const LINK_NAVBAR = [
         title: "Blog",
         description:
           "Temukan berbagai artikel dan tips untuk meningkatkan kemampuan digital kamu",
-        href: "#",
+        href: "/blog",
         icon: <FaNewspaper />,
-        isReleased: false,
+        isReleased: true,
       },
     ],
   },
@@ -88,7 +88,7 @@ const LINKS_FOOTER = [
       },
       {
         title: "Bootcamp",
-        href: "#",
+        href: "/bootcamp",
       },
       {
         title: "Corporate Training",
@@ -104,12 +104,12 @@ const LINKS_FOOTER = [
         href: "/about",
       },
       {
-        title: "Komunitas",
-        href: "https://discord.gg/wpu",
+        title: "Blog",
+        href: "/blog",
       },
       {
-        title: "Karir",
-        href: "#",
+        title: "Komunitas",
+        href: "https://discord.gg/wpu",
       },
     ],
   },
