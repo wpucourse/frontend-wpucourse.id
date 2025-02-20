@@ -30,7 +30,9 @@ const Home = ({ course }: { course: ICourse }) => {
       <About />
       <Featured />
       <Testimonial />
-      <FAQ lists={FAQ_LISTS} />
+      <div className="px-4">
+        <FAQ lists={FAQ_LISTS} />
+      </div>
     </div>
   );
 };

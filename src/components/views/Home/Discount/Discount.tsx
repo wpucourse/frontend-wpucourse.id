@@ -41,8 +41,8 @@ const Discount = ({ course }: { course: ICourse }) => {
           <Image
             className="mt-4 w-full rounded-xl border border-gray-100"
             src={course?.cover}
-            width={500}
-            height={500}
+            width={1920}
+            height={1080}
             alt="mern"
           />
         </div>

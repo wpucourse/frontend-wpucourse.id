@@ -54,12 +54,17 @@ const RamadhanCamp = () => {
             Agung.
           </p>
           <div className="mt-8 flex gap-4">
-            <Link
-              href="#offer"
+            <button
+              onClick={() => {
+                window.scrollTo({
+                  top: (document.getElementById("cost")?.offsetTop ?? 0) - 200,
+                  behavior: "smooth",
+                });
+              }}
               className="rounded-xl bg-wpu-primary px-5 py-3 font-semibold text-white"
             >
               Dapatkan Promo
-            </Link>
+            </button>
             <Link
               href="https://wa.me/6285190062005"
               className="rounded-xl border border-wpu-primary px-5 py-3 font-semibold text-wpu-primary"
