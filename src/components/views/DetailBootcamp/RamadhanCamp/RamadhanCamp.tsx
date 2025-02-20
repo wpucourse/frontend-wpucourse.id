@@ -140,7 +140,7 @@ const RamadhanCamp = () => {
                     {benefit.icon}
                   </div>
                   <p className="font-semibold lg:text-lg">
-                    {benefit.description}
+                    {benefit.highlight} {benefit.description}
                   </p>
                 </div>
               ))}
@@ -247,8 +247,8 @@ const RamadhanCamp = () => {
               <span className="text-wpu-primary">Biaya</span> terjangkau untuk
               masa depan kamu
             </h2>
-            <div className="flex flex-col gap-8 rounded-2xl border-2 border-wpu-primary/50 p-8 lg:flex-row">
-              <div className="w-full md:w-2/3">
+            <div className="flex flex-col-reverse gap-8 rounded-2xl border-2 border-wpu-primary/50 p-8 lg:flex-row">
+              <div className="w-full md:w-3/5">
                 <ul className="space-y-4">
                   {BENEFITS.map((benefit, index) => (
                     <li className="flex gap-4" key={`benefit-price-${index}`}>
@@ -265,7 +265,7 @@ const RamadhanCamp = () => {
                   ))}
                 </ul>
               </div>
-              <div className="w-full lg:w-1/3">
+              <div className="w-full lg:w-2/5">
                 <div className="mb-2 flex items-center gap-2">
                   <p className="text-gray-500 line-through lg:text-lg">
                     Rp 3.000.000
@@ -313,7 +313,7 @@ const RamadhanCamp = () => {
               </div>
               <Link
                 href="https://wa.me/6285190062005"
-                className="flex items-center gap-2 rounded-xl bg-wpu-primary px-4 py-3 font-bold text-white lg:text-lg"
+                className="flex items-center gap-2 text-nowrap rounded-xl bg-wpu-primary px-4 py-3 font-bold text-white lg:text-lg"
               >
                 <IoLogoWhatsapp />
                 Konsultasi Sekarang

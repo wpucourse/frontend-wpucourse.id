@@ -129,7 +129,7 @@ const BENEFITS = [
   {
     icon: <IoMdChatbubbles />,
     highlight: "Live QnA Session",
-    description: "Setiap Pertemuan Live Session Dengan Mentor",
+    description: "Setiap Pertemuan Dengan Mentor",
   },
 ];
 
