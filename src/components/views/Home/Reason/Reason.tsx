@@ -5,7 +5,7 @@ const Reason = () => {
   return (
     <section id="reason" className="px-4 lg:px-0">
       <div
-        className="container rounded-2xl bg-wpu-primary bg-cover bg-center p-8 text-white lg:p-16"
+        className="container rounded-3xl bg-wpu-primary bg-cover bg-center p-8 text-white lg:p-16"
         style={{ backgroundImage: 'url("/home/bg-reason.png")' }}
       >
         <h1 className="mb-4 text-center text-2xl font-extrabold lg:text-4xl">
@@ -66,7 +66,7 @@ const Reason = () => {
               alt="wpu"
               width={1920}
               height={1080}
-              className="rounded-lg"
+              className="rounded-2xl"
             />
           </div>
         </div>

@@ -7,7 +7,7 @@ const ContactPage = () => {
       <Header
         canonical="https://wpucourse.id/contact"
         description="Platform belajar online terbaik di Indonesia"
-        title="WPU Course"
+        title="WPU Course - Kontak"
         page="contact"
         keywords="online course, course, wpu course, wpu, sandhika galih, avip syaifulloh, agung rizkyana, belajar mern, belajar react, belajar nextjs"
       />

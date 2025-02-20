@@ -118,12 +118,12 @@ const MainLayoutNavbar = () => {
         </div>
         <div className="hidden items-center gap-2 md:flex">
           <Link href="https://learn.wpucourse.id/auth/register" target="_blank">
-            <button className="rounded-lg border border-wpu-primary px-4 py-2 font-bold text-wpu-primary hover:opacity-80">
+            <button className="rounded-xl border border-wpu-primary px-4 py-2 font-bold text-wpu-primary hover:opacity-80">
               Daftar
             </button>
           </Link>
           <Link href="https://learn.wpucourse.id/auth/login" target="_blank">
-            <button className="rounded-lg bg-wpu-primary px-4 py-2 font-bold text-white hover:opacity-80">
+            <button className="rounded-xl bg-wpu-primary px-4 py-2 font-bold text-white hover:opacity-80">
               Masuk
             </button>
           </Link>

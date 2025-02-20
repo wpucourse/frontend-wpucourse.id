@@ -14,13 +14,16 @@ const About = () => {
       <div className="mb-8 h-1 w-[100px] rounded-full bg-wpu-primary" />
       <div className="flex flex-col gap-8 lg:flex-row">
         {ABOUT_FOUNDERS.map((founder) => (
-          <div className="flex-1 rounded-2xl border-2 border-gray-100 bg-white p-5 pt-8">
+          <div
+            className="flex-1 rounded-3xl border-2 border-gray-100 bg-white p-5 pt-8"
+            key={founder.name}
+          >
             <h2 className="mb-1 text-2xl font-bold text-wpu-primary">
               {founder.name}
             </h2>
             <p className="font-medium">{founder.role}</p>
             <Image
-              className="mt-4 w-full rounded-lg"
+              className="mt-4 w-full rounded-xl"
               src={founder.image}
               width={500}
               height={500}

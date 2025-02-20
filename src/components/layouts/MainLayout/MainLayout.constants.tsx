@@ -35,9 +35,9 @@ const LINK_NAVBAR = [
         title: "Bootcamp",
         description:
           "Belajar secara interaktif untuk tingkatkan kemampuan digital kamu",
-        href: "#",
+        href: "/bootcamp",
         icon: <FaBookOpen />,
-        isReleased: false,
+        isReleased: true,
       },
       {
         title: "Corporate Training",

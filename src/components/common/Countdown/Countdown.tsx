@@ -9,7 +9,7 @@ const DAY = HOUR * 24;
 const COUNTDOWN_FROM = new Date().setHours(23, 59, 59, 999);
 // const COUNTDOWN_FROM = new Date("2025-02-01T23:59:59");
 
-const useTimer = (unit: string) => {
+const useTimer = (unit: string, endDate?: Date) => {
   const [ref, animate] = useAnimate();
 
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
@@ -24,7 +24,7 @@ const useTimer = (unit: string) => {
   }, []);
 
   const handleCountdown = async () => {
-    const end = new Date(COUNTDOWN_FROM);
+    const end = new Date(endDate || COUNTDOWN_FROM);
     const now = new Date();
     const distance = +end - +now;
 
@@ -63,8 +63,16 @@ const useTimer = (unit: string) => {
   return { ref, time };
 };
 
-const CountdownItem = ({ unit, text }: { unit: string; text: string }) => {
-  const { ref, time } = useTimer(unit);
+const CountdownItem = ({
+  unit,
+  text,
+  endDate,
+}: {
+  unit: string;
+  text: string;
+  endDate?: Date;
+}) => {
+  const { ref, time } = useTimer(unit, endDate);
 
   return (
     <div className="flex h-16 w-1/5 flex-col items-center justify-center gap-1 border-r-[1px] border-slate-200 last:border-r-0 md:h-24 md:gap-2">
@@ -80,13 +88,14 @@ const CountdownItem = ({ unit, text }: { unit: string; text: string }) => {
   );
 };
 
-const Countdown = () => {
+const Countdown = (props: { endDate?: Date }) => {
+  const { endDate } = props;
   return (
     <div className="mx-auto flex w-full max-w-5xl items-center bg-white">
-      <CountdownItem unit="Day" text="Hari" />
-      <CountdownItem unit="Hour" text="Jam" />
-      <CountdownItem unit="Minute" text="Menit" />
-      <CountdownItem unit="Second" text="Detik" />
+      <CountdownItem unit="Day" text="Hari" endDate={endDate} />
+      <CountdownItem unit="Hour" text="Jam" endDate={endDate} />
+      <CountdownItem unit="Minute" text="Menit" endDate={endDate} />
+      <CountdownItem unit="Second" text="Detik" endDate={endDate} />
     </div>
   );
 };

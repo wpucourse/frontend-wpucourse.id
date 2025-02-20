@@ -4,10 +4,11 @@ import Reason from "./Reason";
 import Hero from "./Hero";
 import Discount from "./Discount";
 import Featured from "./Featured";
-import FAQ from "./FAQ";
 import { ICourse } from "@/types/course";
 import { MdClose } from "react-icons/md";
 import { useState } from "react";
+import FAQ from "@/components/common/FAQ";
+import { FAQ_LISTS } from "./Home.constants";
 
 const Home = ({ course }: { course: ICourse }) => {
   const isMaintenance = Object.keys(course).length < 1;
@@ -29,7 +30,7 @@ const Home = ({ course }: { course: ICourse }) => {
       <About />
       <Featured />
       <Testimonial />
-      <FAQ />
+      <FAQ lists={FAQ_LISTS} />
     </div>
   );
 };

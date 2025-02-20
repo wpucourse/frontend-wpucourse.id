@@ -1,23 +1,28 @@
 import { cn } from "@/lib/utils";
 import { useState } from "react";
 import { FaChevronDown } from "react-icons/fa6";
-import { FAQ_LISTS } from "../Home.constants";
 
-const FAQ = () => {
+const FAQ = (props: {
+  lists: { id: string; question: string; answer: string }[];
+  hideTitle?: boolean;
+}) => {
+  const { lists, hideTitle } = props;
   const [openedQuestion, setOpenedQuestion] = useState<string | null>(null);
   return (
-    <section className="container px-4 lg:px-0">
-      <h1 className="mb-8 text-center text-3xl font-bold text-wpu-primary lg:mb-12 lg:text-5xl">
-        Frequently Asked Questions
-      </h1>
+    <section className="container">
+      {!hideTitle && (
+        <h1 className="mb-8 text-center text-3xl font-bold text-wpu-primary lg:mb-12 lg:text-5xl">
+          Frequently Asked Questions
+        </h1>
+      )}
       <div className="mt-8 grid grid-cols-1 gap-4 lg:grid-cols-2">
-        {FAQ_LISTS.map((item) => (
+        {lists.map((item) => (
           <div
-            className="h-fit rounded-lg bg-gray-100 px-6 py-4"
+            className="h-fit rounded-xl bg-gray-100 px-6 py-4"
             key={`FAQ-${item.id}`}
           >
             <div
-              className="flex cursor-pointer items-center justify-between"
+              className="flex cursor-pointer items-center justify-between gap-4"
               onClick={() => {
                 if (openedQuestion === item.id) {
                   setOpenedQuestion(null);
