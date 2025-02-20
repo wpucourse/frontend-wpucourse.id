@@ -6,7 +6,6 @@ import Link from "next/link";
 
 const DetailBlog = (props: { article: any }) => {
   const { article } = props;
-  console.log(article);
   return (
     <div className="container relative mx-auto px-4 pt-36 lg:px-0">
       <section className="flex w-full flex-col items-center justify-center antialiased lg:px-32">
