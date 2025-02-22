@@ -45,7 +45,7 @@ const RamadhanCamp = () => {
         <div className="lg:w-1/2">
           <h1 className="mb-4 text-3xl font-bold !leading-snug text-gray-700 lg:text-5xl">
             Kajian <span className="text-wpu-primary">React.js </span>
-            dari dasar hingga mahir
+            Dari Dasar Hingga Mahir
           </h1>
           <p className="font-medium text-gray-500 lg:text-lg">
             WPU Course menawarkan bootcamp online yang akan membantu kamu
@@ -114,7 +114,7 @@ const RamadhanCamp = () => {
             <p className="font-medium text-gray-500 lg:text-lg">
               WPU Ramadhan Camp adalah program intensif yang diselenggarakan WPU
               Course untuk membantu kamu belajar React JS. Program ini terdiri
-              dari 8 pertemuan yang akan membimbing kamu untuk belajar React JS
+              dari 9 pertemuan yang akan membimbing kamu untuk belajar React JS
               mulai dari dasar hingga mahir.
             </p>
             <p className="font-medium text-gray-500 lg:text-lg">
@@ -127,10 +127,6 @@ const RamadhanCamp = () => {
               Bootcamp ini dirancang untuk semua tahapan karir, dari mulai
               mahasiswa, fresh graduate sampai profesional. Sehingga buat kamu
               yang masih pemula juga dapat mengikuti bootcamp ini.
-            </p>
-            <p className="font-medium text-gray-500 lg:text-lg">
-              Bootcamp ini exclusive hanya untuk 35 pendaftar pertama, sehingga
-              jangan lewatkan kesempatan ini!
             </p>
           </div>
           <div className="w-full" id="benefit">
@@ -206,9 +202,14 @@ const RamadhanCamp = () => {
                       {curiculum.title}
                     </h4>
                     <p className="mt-1 font-medium text-gray-500">
+                      <span className="font-bold">Jadwal</span> :{" "}
+                      {curiculum.schedule}
+                    </p>
+                    <p className="mt-1 font-medium text-gray-500">
                       <span className="font-bold">Mentor</span> :{" "}
                       {curiculum.mentor}
                     </p>
+
                     <p className="mt-1 font-bold text-gray-500">Materi :</p>
                     <div className="flex flex-col lg:flex-row lg:gap-8">
                       <ol className="list-decimal pl-8">

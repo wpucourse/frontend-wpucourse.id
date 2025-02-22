@@ -5,6 +5,7 @@ import {
   FaSlideshare,
   FaVideo,
 } from "react-icons/fa";
+import { FaMedal } from "react-icons/fa6";
 import { IoMdChatbubbles } from "react-icons/io";
 
 const SECTIONS = [
@@ -18,61 +19,91 @@ const SECTIONS = [
 
 const CURRICULUMS = [
   {
-    title: "JavaScript",
+    title: "1.JavaScript Overview For React",
     mentor: "Sandhika Galih",
     icon: "/home/icon/icon-js.png",
+    schedule: "Rabu, 5 Maret 2024, 20.00 - 22.00 WIB",
+    subtopic1: ["Variabel", "Struktur Kontrol"],
+    subtopic2: ["Function", "Objek dan Array"],
+  },
+  {
+    title: "2.JavaScript Asyncronous",
+    mentor: "Sandhika Galih",
+    icon: "/home/icon/icon-js.png",
+    schedule: "Jumat, 7 Maret 2024, 20.00 - 22.00 WIB",
+    subtopic1: ["Event Loop", "Callback", "Promise"],
+    subtopic2: ["Async / Await", "Fetch API"],
+  },
+  {
+    title: "3.DOM Manipulation",
+    mentor: "Sandhika Galih",
+    icon: "/home/icon/icon-js.png",
+    schedule: "Senin, 10 Maret 2024, 20.00 - 22.00 WIB",
+    subtopic1: ["Pengenalan DOM", "Element Selection", "DOM Manipulation"],
+    subtopic2: ["Event Handling", "DOM Traversal", "Implementation"],
+  },
+  {
+    title: "4.Functional Programming",
+    mentor: "Agung Rizkyana",
+    icon: "/home/icon/icon-js.png",
+    schedule: "Rabu, 12 Maret 2024, 20.00 - 22.00 WIB",
     subtopic1: [
-      "Pengenalan JavaScript",
-      "Sintaks Dasar",
-      "Struktur Kontrol",
-      "Fungsi",
-      "Objek dan Array",
-      "JavaScript ES6+",
+      "Imperative Versus Declarative",
+      "Functional Concept",
+      "Immutability",
+      "Pure Functions",
     ],
     subtopic2: [
-      "Pengenalan DOM",
-      "Seleksi Elemen DOM",
-      "Manipulasi Elemen DOM",
-      "Event Handling",
-      "DOM Traversal",
-      "Contoh Implementasi Sederhana",
+      "Data Transformations",
+      "Higher-Order Functions",
+      "Recursion",
+      "Composition",
     ],
   },
   {
-    title: "TypeScript",
+    title: "5.Typescript For React",
     mentor: "Agung Rizkyana",
     icon: "/home/icon/icon-ts.png",
-    subtopic1: [
-      "Pengenalan TypeScript",
-      "Tipe Data",
-      "Interface dan Type",
-      "Function",
-    ],
-    subtopic2: [
-      "Object Oriented Programming",
-      "Generic",
-      "TypeScript dalam Frameworks (Express, NestJS, React)",
-      "Study Kasus Sederhana",
-    ],
+    schedule: "Jumat, 14 Maret 2024, 20.00 - 22.00 WIB",
+    subtopic1: ["Pengenalan TypeScript", "Data Type"],
+    subtopic2: ["Interface and Type", "Function"],
   },
   {
-    title: "React.js",
+    title: "6.How React Works",
+    mentor: "Agung Rizkyana",
+    icon: "/home/icon/icon-react.png",
+    schedule: "Senin, 17 Maret 2024, 20.00 - 22.00 WIB",
+    subtopic1: ["Pengenalan React JS", "Konsep Komponen"],
+    subtopic2: ["Atomic Design", "Folder Structure"],
+  },
+  {
+    title: "6.React Fundamental",
     mentor: "Avip Syaifulloh",
     icon: "/home/icon/icon-react.png",
+    schedule: "Rabu, 19 Maret 2024, 20.00 - 22.00 WIB",
     subtopic1: [
-      "Pengenalan React",
-      "Component",
-      "Props",
-      "Event Handler",
-      "Form Handler",
+      "Basic Component",
+      "JSX",
+      "Conditional Rendering",
+      "Nested Component",
     ],
-    subtopic2: [
-      "Hooks",
-      "State",
-      "Custom Hooks",
-      "Data Fetching",
-      "Deployment",
-    ],
+    subtopic2: ["Render List", "Props", "Routing"],
+  },
+  {
+    title: "7.React Hooks & Handling Event",
+    mentor: "Avip Syaifulloh",
+    icon: "/home/icon/icon-react.png",
+    schedule: "Jumat, 21 Maret 2024, 20.00 - 22.00 WIB",
+    subtopic1: ["Event Handler", "State Concept", "useState"],
+    subtopic2: ["useEffect", "Custom Hooks", "Fetch Data"],
+  },
+  {
+    title: "8.Mini Project & QnA",
+    mentor: "Avip Syaifulloh",
+    icon: "/home/icon/icon-react.png",
+    schedule: "Senin, 24 Maret 2024, 20.00 - 22.00 WIB",
+    subtopic1: ["Penjelasan Mini Project", "Live QnA"],
+    subtopic2: ["Tips & Tricks For Next Step", "Closing"],
   },
 ];
 
@@ -103,7 +134,7 @@ const MENTORS = [
 const BENEFITS = [
   {
     icon: <FaChalkboardTeacher />,
-    highlight: "8x Live Session",
+    highlight: "9x Live Session",
     description: "Bersama Expert Mentor Secara Online",
   },
   {
@@ -127,9 +158,9 @@ const BENEFITS = [
     description: "Session Setiap Pertemuan",
   },
   {
-    icon: <IoMdChatbubbles />,
-    highlight: "Live QnA Session",
-    description: "Setiap Pertemuan Dengan Mentor",
+    icon: <FaMedal />,
+    highlight: "Sertifikat Digital",
+    description: "Setelah Selesai Bootcamp",
   },
 ];
 
