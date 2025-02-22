@@ -77,7 +77,7 @@ const CURRICULUMS = [
     subtopic2: ["Atomic Design", "Folder Structure"],
   },
   {
-    title: "6.React Fundamental",
+    title: "7.React Fundamental",
     mentor: "Avip Syaifulloh",
     icon: "/home/icon/icon-react.png",
     schedule: "Rabu, 19 Maret 2024, 20.00 - 22.00 WIB",
@@ -90,7 +90,7 @@ const CURRICULUMS = [
     subtopic2: ["Render List", "Props", "Routing"],
   },
   {
-    title: "7.React Hooks & Handling Event",
+    title: "8.React Hooks & Handling Event",
     mentor: "Avip Syaifulloh",
     icon: "/home/icon/icon-react.png",
     schedule: "Jumat, 21 Maret 2024, 20.00 - 22.00 WIB",
@@ -98,7 +98,7 @@ const CURRICULUMS = [
     subtopic2: ["useEffect", "Custom Hooks", "Fetch Data"],
   },
   {
-    title: "8.Mini Project & QnA",
+    title: "9.Mini Project & QnA",
     mentor: "Avip Syaifulloh",
     icon: "/home/icon/icon-react.png",
     schedule: "Senin, 24 Maret 2024, 20.00 - 22.00 WIB",
