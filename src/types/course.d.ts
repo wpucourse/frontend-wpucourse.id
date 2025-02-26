@@ -16,7 +16,7 @@ interface ICourseResponse {
   price: number;
   website: string;
   description: string;
-  voucher: {
+  defaultVoucher: {
     code: string;
     discount: number;
   };
