@@ -287,16 +287,13 @@ const RamadhanCamp = () => {
                   Rp 495.000
                 </h3>
                 <p className="mb-6 border-b border-gray-200 pb-6 text-sm text-gray-500">
-                  {/* *Hari terakhir untuk harga tersebut */}
-                  *Jumlah Kursi Terbatas
+                  *Hari terakhir untuk harga tersebut
                 </p>
                 <Link
-                  // href="https://learn.wpucourse.id"
-                  href="#cost"
+                  href="https://learn.wpucourse.id"
                   className="flex w-full justify-center rounded-lg bg-wpu-primary px-4 py-3 font-semibold text-white lg:text-xl"
                 >
-                  {/* Daftar Sekarang */}
-                  Segera Hadir
+                  Daftar Sekarang
                 </Link>
               </div>
             </div>

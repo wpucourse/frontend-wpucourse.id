@@ -8,7 +8,7 @@ import { useState } from "react";
 import { FaRegCheckCircle } from "react-icons/fa";
 import { FaRegPaste } from "react-icons/fa6";
 
-const COUNTDOWN_FROM = new Date("2025-02-27T23:59:59");
+const COUNTDOWN_FROM = new Date("2025-03-04T23:59:59");
 
 const Discount = () => {
   const [successCopy, setSuccessCopy] = useState(false);
@@ -36,7 +36,7 @@ const Discount = () => {
       </div>
       <div className="w-full lg:w-1/2">
         <p className="mb-4 font-semibold text-gray-700 lg:text-lg">
-          Akan Tersedia Dalam:
+          Sisa Waktu Pendaftaran:
         </p>
         <Countdown endDate={COUNTDOWN_FROM} />
         <h2 className="mt-4 text-2xl font-bold !leading-snug text-wpu-primary lg:text-4xl">

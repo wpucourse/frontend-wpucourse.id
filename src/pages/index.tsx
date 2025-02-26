@@ -21,19 +21,19 @@ export default function HomePage({ course }: { course: ICourse }) {
 export async function getServerSideProps() {
   try {
     const res = await fetch(
-      "https://api-platform.wpucourse.id/api/v1/courses?limit=1&page=1",
+      "https://api-platform.wpucourse.id/api/v1/courses?limit=1&page=1&variant=course",
     )
       .then((res) => res.json())
       .then((res) => res.data);
     const course = {
       cover: res.data[0].cover,
       title: res.data[0].title,
-      price: res.data[0].price,
+      price: res.data[0].originalPrice,
       slug: res.data[0].slug,
       website: res.data[0].website,
       description: res.data[0].description,
-      voucher: res.data[0].voucher.code,
-      discount: res.data[0].voucher.discount,
+      voucher: res.data[0].defaultVoucher.code,
+      discount: res.data[0].defaultVoucher.discount,
     };
     return {
       props: {
