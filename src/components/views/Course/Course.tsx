@@ -21,15 +21,17 @@ const Course = ({ course }: { course: ICourseResponse[] }) => {
                 className="rounded-lg"
               />
               <div className="absolute right-6 top-6 h-fit rounded-md bg-white/70 px-2 py-1 text-sm font-bold text-gray-700">
-                {item.voucher.discount}% Off
+                {item.defaultVoucher.discount}% Off
               </div>
               <h4 className="mb-4 mt-4 text-lg font-bold">{item.title}</h4>
               <p className="font-bold text-red-500 line-through">
-                {convertIDR(item.price)}
+                {convertIDR(item.originalPrice)}
               </p>
               <p className="text-2xl font-black text-gray-700">
                 {convertIDR(
-                  item?.price - (item?.price * item?.voucher?.discount) / 100,
+                  item?.originalPrice -
+                    (item?.originalPrice * item?.defaultVoucher?.discount) /
+                      100,
                 )}
               </p>
             </div>

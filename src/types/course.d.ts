@@ -20,6 +20,7 @@ interface ICourseResponse {
     code: string;
     discount: number;
   };
+  originalPrice: number;
 }
 
 export type { ICourse, ICourseResponse };
