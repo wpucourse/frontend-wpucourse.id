@@ -291,9 +291,9 @@ const RamadhanCamp = () => {
                 </p>
                 <Link
                   href="https://learn.wpucourse.id"
-                  className="flex w-full justify-center rounded-lg bg-wpu-primary px-4 py-3 font-semibold text-white lg:text-xl"
+                  className="flex w-full justify-center rounded-lg bg-wpu-primary/50 px-4 py-3 font-semibold text-white lg:text-xl"
                 >
-                  Daftar Sekarang
+                  Quota Sudah Penuh
                 </Link>
               </div>
             </div>

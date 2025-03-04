@@ -35,10 +35,6 @@ const Discount = () => {
         </div>
       </div>
       <div className="w-full lg:w-1/2">
-        <p className="mb-4 font-semibold text-gray-700 lg:text-lg">
-          Sisa Waktu Pendaftaran:
-        </p>
-        <Countdown endDate={COUNTDOWN_FROM} />
         <h2 className="mt-4 text-2xl font-bold !leading-snug text-wpu-primary lg:text-4xl">
           Manfaatkan Waktu Ramadhan Untuk Belajar Skill Baru
         </h2>
