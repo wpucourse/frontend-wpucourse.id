@@ -53,6 +53,12 @@ const RamadhanCamp = () => {
             pengalaman belajar langsung bersama Pak Dhika, Kang Avip dan Kang
             Agung.
           </p>
+          <div>
+            <h4 className="mt-4 text-lg font-semibold text-neutral-600">
+              Supported by:
+            </h4>
+            <img src="https://lg.cloudhost.id/logo.png" className="w-52" />
+          </div>
           <div className="mt-8 flex gap-4">
             <button
               onClick={() => {

@@ -5,7 +5,7 @@ import {
   FaSlideshare,
   FaVideo,
 } from "react-icons/fa";
-import { FaMedal } from "react-icons/fa6";
+import { FaCloud, FaMedal, FaTeamspeak } from "react-icons/fa6";
 import { IoMdChatbubbles } from "react-icons/io";
 
 const SECTIONS = [
@@ -161,6 +161,16 @@ const BENEFITS = [
     icon: <FaMedal />,
     highlight: "Sertifikat Digital",
     description: "Setelah Selesai Bootcamp",
+  },
+  {
+    icon: <FaTeamspeak />,
+    highlight: "Mentor Expert",
+    description: "Yang Mengajar Sesuai Bidangnya",
+  },
+  {
+    icon: <FaCloud />,
+    highlight: "Saldo VPS Rp 100.000",
+    description: "Dari IdCloudHost",
   },
 ];
 
