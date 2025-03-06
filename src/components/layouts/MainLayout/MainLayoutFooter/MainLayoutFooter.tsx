@@ -65,6 +65,7 @@ const MainLayoutFooter = () => {
                 key={social.title}
                 className="text-3xl text-neutral-400 hover:text-neutral-200"
                 target="_blank"
+                aria-label={social.title}
               >
                 {social.icon}
               </Link>

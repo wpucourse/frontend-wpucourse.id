@@ -325,7 +325,11 @@ const Chatbot = () => {
             className="flex-1 text-sm caret-wpu-primary focus:outline-none"
             type="text"
           />
-          <button type="submit" className="flex items-center gap-2">
+          <button
+            type="submit"
+            id="send-chat"
+            className="flex items-center gap-2"
+          >
             <IoSend className="cursor-pointer text-2xl text-wpu-primary" />
           </button>
         </form>
