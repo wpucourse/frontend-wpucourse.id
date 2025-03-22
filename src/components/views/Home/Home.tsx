@@ -25,10 +25,10 @@ const Home = ({ course }: { course: ICourse }) => {
         </div>
       )}
       <Hero />
-      <Featured />
+      {!isMaintenance && <Discount course={course} />}
       <Reason />
       <About />
-      {!isMaintenance && <Discount course={course} />}
+      <Featured />
       <Testimonial />
       <div className="px-4">
         <FAQ lists={FAQ_LISTS} />
