@@ -11,7 +11,10 @@ const Course = ({ course }: { course: ICourseResponse[] }) => {
       </h1>
       <div className="grid w-full grid-cols-1 gap-4 lg:grid-cols-3">
         {course.map((item) => (
-          <Link href={item?.website} target="_blank">
+          <Link
+            href={`https://learn.wpucourse.id/checkout/${item?.slug}`}
+            target="_blank"
+          >
             <div className="relative flex h-full flex-col rounded-2xl bg-gray-200/50 p-4">
               <div>
                 <Image
