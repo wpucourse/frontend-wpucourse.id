@@ -21,7 +21,7 @@ export default function HomePage({ course }: { course: ICourse }) {
 export async function getServerSideProps() {
   try {
     const res = await fetch(
-      "https://api-platform.wpucourse.id/api/v1/courses?limit=1&page=1&variant=course",
+      "https://api-platform.wpucourse.id/api/v1/courses?limit=1&page=2&variant=course",
     )
       .then((res) => res.json())
       .then((res) => res.data);
