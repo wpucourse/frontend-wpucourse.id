@@ -197,7 +197,7 @@ const Chatbot = () => {
   } = useChatbot();
 
   return (
-    <div className="fixed bottom-4 right-4 lg:bottom-8 lg:right-8">
+    <div className="fixed bottom-4 right-4 z-50 lg:bottom-8 lg:right-8">
       <div
         className={cn(
           "absolute bottom-16 right-0 w-[calc(100vw-2rem)] origin-bottom-right scale-0 rounded-xl bg-white shadow-lg transition-all lg:right-0 lg:w-96",

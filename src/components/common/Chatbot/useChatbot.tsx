@@ -44,6 +44,7 @@ const useChatbot = () => {
     control,
     handleSubmit,
     reset,
+    setValue,
     formState: { errors, isSubmitting },
   } = useForm<qnaForm>({
     resolver: zodResolver(chatbotSchema),
@@ -51,6 +52,7 @@ const useChatbot = () => {
   });
 
   const handleService = async (question: string) => {
+    setValue("question", "");
     const response = await chatbotService.generateResponse({ question });
     return response.data;
   };
