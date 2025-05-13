@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+import { cn } from "@/libs/tailwind/utils";
 
 const ReviewCard = ({ name, body }: { name: string; body: string }) => {
   return (

@@ -1,6 +1,6 @@
 import ConfettiSideCannons from "@/components/common/Confetti";
 import GridPattern from "@/components/common/GridPattern/GridPattern";
-import { cn } from "@/lib/utils";
+import { cn } from "@/libs/tailwind/utils";
 import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRightLong } from "react-icons/fa6";

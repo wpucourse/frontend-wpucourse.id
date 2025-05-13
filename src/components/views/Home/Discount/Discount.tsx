@@ -1,5 +1,5 @@
 import Countdown from "@/components/common/Countdown";
-import { cn } from "@/lib/utils";
+import { cn } from "@/libs/tailwind/utils";
 import { ICourse } from "@/types/course";
 import { convertIDR } from "@/utils/currency";
 import Image from "next/image";

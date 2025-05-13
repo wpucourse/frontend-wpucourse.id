@@ -8,7 +8,7 @@ import {
   SECTIONS,
 } from "./RamadhanCamp.constants";
 import { useEffect, useState } from "react";
-import { cn } from "@/lib/utils";
+import { cn } from "@/libs/tailwind/utils";
 import { FaCheck, FaLinkedin } from "react-icons/fa6";
 import FAQ from "@/components/common/FAQ";
 import { IoLogoWhatsapp } from "react-icons/io5";

@@ -1,10 +1,12 @@
-import { cn } from "@/lib/utils";
+import { cn } from "@/libs/tailwind/utils";
 import Image from "next/image";
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { HiChatBubbleBottomCenterText } from "react-icons/hi2";
 import { IoSend } from "react-icons/io5";
 import { RiCloseLargeFill } from "react-icons/ri";
+import useChatbot from "./useChatbot";
+import { Controller } from "react-hook-form";
 
 const responses = [
   {
@@ -184,64 +186,16 @@ const responses = [
 
 const Chatbot = () => {
   const [openChat, setOpenChat] = useState(false);
-  const [botLoading, setBotLoading] = useState(false);
-  const [conversation, setConversation] = useState([
-    {
-      role: "system",
-      content: "Halo saya Kang APIP WPU, apa yang ingin kamu tanyakan?",
-      option: ["Pembayaran", "Course", "Login & Registrasi", "Chat Admin"],
-    },
-  ]);
+  const {
+    control,
+    chatbotPending,
+    chatbotRef,
+    conversation,
+    handleSendMessage,
+    handleSubmit,
+    isSubmitting,
+  } = useChatbot();
 
-  const chatbotRef = useRef<HTMLDivElement>(null);
-
-  const handleChat = (message: string) => {
-    const element = chatbotRef.current;
-    setConversation((prev) => [
-      ...prev,
-      {
-        role: "user",
-        content: message,
-        option: [],
-      },
-    ]);
-
-    setBotLoading(true);
-    element?.scrollTo({
-      top: element.scrollHeight + 10,
-    });
-    setTimeout(() => {
-      const botLogic: any = responses.find((item) =>
-        item.keyword.test(message),
-      );
-      setConversation((prev) => [
-        ...prev,
-        {
-          role: "system",
-          content: botLogic?.response || (
-            <div>
-              <p>
-                Maaf, saya tidak mengerti pertanyaan Anda. Silahkan hubungi
-                Whatsapp admin:
-              </p>
-              <Link
-                href="https://api.whatsapp.com/send?phone=6285190062005"
-                target="_blank"
-                className="font-semibold text-wpu-primary"
-              >
-                +62 851-9006-2005
-              </Link>
-            </div>
-          ),
-          option: botLogic?.option || ["Kembali ke menu utama"],
-        },
-      ]);
-      setBotLoading(false);
-      element?.scrollTo({
-        top: element.scrollHeight + 10,
-      });
-    }, 2000);
-  };
   return (
     <div className="fixed bottom-4 right-4 lg:bottom-8 lg:right-8">
       <div
@@ -281,7 +235,7 @@ const Chatbot = () => {
             >
               <div
                 className={cn(
-                  "w-fit max-w-[90%] rounded-xl px-4 py-2 text-sm",
+                  "w-fit max-w-[90%] whitespace-pre-wrap rounded-xl px-4 py-2 text-sm",
                   item?.role === "system"
                     ? "bg-gray-200"
                     : "bg-wpu-primary/80 text-white",
@@ -289,22 +243,31 @@ const Chatbot = () => {
               >
                 {item?.content}
               </div>
-              {item.option.length > 0 && (
+              {item.options.length > 0 && (
                 <div className="mb-4 flex max-w-[90%] flex-wrap gap-2">
-                  {item?.option.map((item, index) => (
-                    <button
-                      key={index}
-                      className="flex items-center gap-2 rounded-full border border-wpu-primary px-3 py-1 text-xs text-wpu-primary hover:bg-gray-100 lg:text-sm"
-                      onClick={() => handleChat(item)}
-                    >
-                      {item}
-                    </button>
-                  ))}
+                  {item?.options.map(
+                    (
+                      item: { title: string; type: string; action: string },
+                      index,
+                    ) => (
+                      <button
+                        key={index}
+                        className="flex items-center gap-2 rounded-full border border-wpu-primary px-3 py-1 text-xs text-wpu-primary hover:bg-gray-100 lg:text-sm"
+                        onClick={() =>
+                          item.type === "link"
+                            ? window.open(item.action, "_blank")
+                            : handleSendMessage({ question: item.action })
+                        }
+                      >
+                        {item.title}
+                      </button>
+                    ),
+                  )}
                 </div>
               )}
             </div>
           ))}
-          {botLoading && (
+          {chatbotPending && (
             <div className="mt-4 flex w-full justify-start gap-2">
               <div className="h-2 w-2 animate-pulse rounded-full bg-wpu-primary" />
               <div className="h-2 w-2 animate-pulse rounded-full bg-wpu-primary" />
@@ -313,17 +276,30 @@ const Chatbot = () => {
           )}
         </div>
         <form
-          onSubmit={(e: any) => {
-            e.preventDefault();
-            handleChat(e.target[0].value);
-            e.target[0].value = "";
-          }}
+          onSubmit={handleSubmit(handleSendMessage)}
           className="flex w-full rounded-b-xl border-t border-gray-100 p-4"
         >
-          <input
-            placeholder="Tulis Pesan..."
-            className="flex-1 text-sm caret-wpu-primary focus:outline-none"
-            type="text"
+          <Controller
+            name="question"
+            control={control}
+            render={({ field }) => (
+              <input
+                {...field}
+                disabled={isSubmitting}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" && !e.shiftKey) {
+                    e.preventDefault();
+                    handleSendMessage({
+                      question: e.currentTarget.value,
+                    });
+                    e.currentTarget.value = "";
+                  }
+                }}
+                placeholder="Tulis Pesan..."
+                className="flex-1 text-sm caret-wpu-primary focus:outline-none"
+                type="text"
+              />
+            )}
           />
           <button
             type="submit"

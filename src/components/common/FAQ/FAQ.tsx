@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+import { cn } from "@/libs/tailwind/utils";
 import { useState } from "react";
 import { FaChevronDown } from "react-icons/fa6";
 
