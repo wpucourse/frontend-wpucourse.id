@@ -43,7 +43,7 @@ const Bootcamp = () => {
         </div>
       </section>
       <section id="#offer" className="container mt-32 px-4 lg:px-0">
-        <h2 className="mb-2 text-3xl font-bold text-wpu-primary lg:text-5xl">
+        <h2 className="mb-2 text-3xl font-bold text-wpu-primary lg:text-4xl">
           Bootcamp Tersedia
         </h2>
         <p className="mb-4 text-gray-700 lg:text-lg">

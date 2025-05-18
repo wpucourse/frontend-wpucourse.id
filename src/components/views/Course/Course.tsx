@@ -14,9 +14,9 @@ const Course = ({ course }: { course: ICourseResponse[] }) => {
           </h1>
           <p className="font-medium text-gray-500 lg:text-lg">
             Online coures kami bisa bantu kamu dalam meningkatkan skill digital
-            dan meningkatkan karier yang sesuai dengan kebutuhan industri. Kamu
-            bisa belajar kapanpun dan dimanapun dan kami juga menyediakan mentor
-            yang berpengalaman di bidangnya yang siap membantu kamu dalam proses
+            yang sesuai dengan kebutuhan industri. Kamu bisa belajar kapanpun
+            dan dimanapun kamu mau. kami juga menyediakan mentor yang
+            berpengalaman di bidangnya yang siap membantu kamu dalam proses
             belajar.
           </p>
           <div className="mt-8 flex gap-4" id="offer">
@@ -45,9 +45,14 @@ const Course = ({ course }: { course: ICourseResponse[] }) => {
         </div>
       </section>
       <section className="mt-16">
-        <h2 className="mb-4 text-3xl font-bold text-gray-700 lg:text-4xl">
+        <h2 className="mb-2 text-3xl font-bold text-wpu-primary lg:text-4xl">
           Course Terbaru Kami
         </h2>
+        <p className="mb-4 w-full text-gray-700 lg:text-lg">
+          Kami menyediakan berbagai macam course yang dapat membantu kamu dalam
+          mengembangkan kemampuan dan keterampilan digital.
+        </p>
+        <div className="mb-8 h-1 w-[100px] rounded-full bg-wpu-primary" />
         <div className="grid w-full grid-cols-1 gap-4 lg:grid-cols-3">
           {course.map((item) => (
             <Link href={`${item?.website}`} target="_blank">
