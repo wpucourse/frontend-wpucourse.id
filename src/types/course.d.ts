@@ -21,6 +21,7 @@ interface ICourseResponse {
     discount: number;
   };
   originalPrice: number;
+  isTeaser: boolean;
 }
 
 export type { ICourse, ICourseResponse };

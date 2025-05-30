@@ -4,6 +4,7 @@ import Home from "@/components/views/Home";
 import { ICourse } from "@/types/course";
 
 export default function HomePage({ course }: { course: ICourse }) {
+  console.log("course", course);
   return (
     <>
       <Header
@@ -21,7 +22,7 @@ export default function HomePage({ course }: { course: ICourse }) {
 export async function getServerSideProps() {
   try {
     const res = await fetch(
-      "https://api-platform.wpucourse.id/api/v1/courses?limit=1&page=2&variant=course",
+      "https://api-platform.wpucourse.id/api/v1/courses?limit=1&page=3&variant=course",
     )
       .then((res) => res.json())
       .then((res) => res.data);
@@ -32,8 +33,8 @@ export async function getServerSideProps() {
       slug: res.data[0].slug,
       website: res.data[0].website,
       description: res.data[0].description,
-      voucher: res.data[0].defaultVoucher.code,
-      discount: res.data[0].defaultVoucher.discount,
+      voucher: res.data[0]?.defaultVoucher?.code || "",
+      discount: res.data[0]?.defaultVoucher?.discount || 0,
     };
     return {
       props: {

@@ -3,7 +3,7 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import MainLayoutNavbar from "./MainLayoutNavbar";
 import MainLayoutFooter from "./MainLayoutFooter";
 import Chatbot from "@/components/common/Chatbot";
-import { LoadingBarContainer, useLoadingBar } from "react-top-loading-bar";
+import { useLoadingBar } from "react-top-loading-bar";
 import { Router } from "next/router";
 
 interface PropTypes {

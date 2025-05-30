@@ -79,13 +79,16 @@ const Course = ({ course }: { course: ICourseResponse[] }) => {
                     </p>
                   )}
                   <p className="text-2xl font-black text-gray-700">
-                    {convertIDR(
-                      item?.originalPrice -
-                        (item?.defaultVoucher?.discount
-                          ? item?.originalPrice * item?.defaultVoucher?.discount
-                          : 0) /
-                          100,
-                    )}
+                    {item.isTeaser
+                      ? "Segera Hadir"
+                      : convertIDR(
+                          item?.originalPrice -
+                            (item?.defaultVoucher?.discount
+                              ? item?.originalPrice *
+                                item?.defaultVoucher?.discount
+                              : 0) /
+                              100,
+                        )}
                   </p>
                 </div>
               </div>
