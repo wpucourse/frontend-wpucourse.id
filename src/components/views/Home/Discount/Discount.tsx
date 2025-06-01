@@ -3,6 +3,7 @@ import { cn } from "@/libs/tailwind/utils";
 import { ICourse } from "@/types/course";
 import { convertIDR } from "@/utils/currency";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { FaRegCheckCircle } from "react-icons/fa";
 import { FaRegPaste } from "react-icons/fa6";
@@ -57,7 +58,13 @@ const Discount = ({ course }: { course: ICourse }) => {
           belajar di platform kami. Salin kode ini dan nikmati penawaran spesial
           saat membeli course di WPU Course.
         </p>
-        <div
+        <Link
+          href="https://learn.wpucourse.id"
+          className="mb-6 inline-block rounded-xl bg-wpu-primary px-5 py-3 font-semibold text-white"
+        >
+          Belajar Sekarang
+        </Link>
+        {/* <div
           className={cn(
             "flex w-fit items-center justify-between gap-6 rounded-lg border-2 border-dashed border-gray-300 px-4 py-3",
             {
@@ -82,7 +89,7 @@ const Discount = ({ course }: { course: ICourse }) => {
               onClick={copyToClipboard}
             />
           )}
-        </div>
+        </div> */}
       </div>
     </section>
   );

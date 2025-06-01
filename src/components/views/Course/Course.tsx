@@ -13,7 +13,7 @@ const Course = ({ course }: { course: ICourseResponse[] }) => {
             <span className="text-wpu-primary"> WPU Course</span>
           </h1>
           <p className="font-medium text-gray-500 lg:text-lg">
-            Online coures kami bisa bantu kamu dalam meningkatkan skill digital
+            Online course kami bisa bantu kamu dalam meningkatkan skill digital
             yang sesuai dengan kebutuhan industri. Kamu bisa belajar kapanpun
             dan dimanapun kamu mau. kami juga menyediakan mentor yang
             berpengalaman di bidangnya yang siap membantu kamu dalam proses
